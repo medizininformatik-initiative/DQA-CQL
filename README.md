@@ -44,7 +44,7 @@ Read more about deployment [here](docs/deployment.md).
 
 The scripts were developed with help of available KDS text data from [kerndatensatz-testdaten][8] and [mii-testdata][9]. Documentation for downloading the test data and importing them into the FHIR server can be found [here](docs/test-data.md).
 
-# CQL Script Execution
+## CQL Script Execution
 
 After the example deployment is set up and the test data is imported, the scripts can be executed the following way:
 
