@@ -34,29 +34,28 @@ sequenceDiagram
     blazectl->>blazectl: render-report
 ```
 
-# Minimal Example Deployment
+## Minimal Example Deployment
 
 This repository contains a simple, minimal [Docker Compose file](./docker-compose.yml) that can be used to spin up da Blaze FHIR server and a Blaze terminology server. Other deployments with other CQL enabled FHIR servers and for example [Ontoserver][7] as terminology server are possible.
 
-```sh
-docker compose up -d
-```
+Read more about deployment [here](docs/deployment.md).
 
-```sh
-./download-synthea-test-data.sh
-```
+## Test Data
 
-```sh
-blazectl --server http://localhost:8080/fhir upload <temp-dir>
-```
+The scripts were developed with help of available KDS text data from [kerndatensatz-testdaten][8] and [mii-testdata][9]. Documentation for downloading the test data and importing them into the FHIR server can be found [here](docs/test-data.md).
 
 # CQL Script Execution
 
-## Condition
+After the example deployment is set up and the test data is imported, the scripts can be executed the following way:
 
 ```sh
-blazectl --server http://localhost:8080/fhir evaluate-measure scripts/condition.yml | jq -rf scripts/table.jq
+blazectl --server http://localhost:8080/fhir evaluate-measure scripts/condition.yml | blazectl render-report > reports/condition.html
+blazectl --server http://localhost:8080/fhir evaluate-measure scripts/encounter.yml | blazectl render-report > reports/encounter.html
 ```
+
+## Example Reports
+
+Rendered HTML reports of the example scripts over the test data can be found in the `reports` directory.
 
 [1]: <https://simplifier.net/organization/koordinationsstellemii>
 [2]: <https://hl7.org/fhir/R4/clinicalreasoning-quality-reporting.html>
@@ -65,3 +64,5 @@ blazectl --server http://localhost:8080/fhir evaluate-measure scripts/condition.
 [5]: <https://github.com/samply/blazectl>
 [6]: <https://samply.github.io/blaze/cql-queries/api.html>
 [7]: <https://ontoserver.csiro.au/>
+[8]: <https://github.com/medizininformatik-initiative/kerndatensatz-testdaten>
+[9]: <https://github.com/medizininformatik-initiative/mii-testdata>
