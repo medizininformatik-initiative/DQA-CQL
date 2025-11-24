@@ -25,7 +25,7 @@ services:
     - "8082:8080"
     volumes:
     - "blaze-terminology-data:/app/data"
-    #- "./SnomedCT_Germany-EditionRelease_PRODUCTION_20241115T120000Z:/app/sct-release"
+    #- "./SnomedCT_Germany-EditionRelease_PRODUCTION_20251115T120000Z:/app/sct-release"
 
 volumes:
   blaze-data:
