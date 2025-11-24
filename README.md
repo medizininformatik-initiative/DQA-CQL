@@ -14,8 +14,8 @@ The scripts have the following goals:
 
 ```mermaid
 architecture-beta
-    service ts[Terminology Server]
-    service db[FHIR Server]
+    service ts(server)[Terminology Server]
+    service db(server)[FHIR Server]
     db:L -- R:ts
 ```
 
