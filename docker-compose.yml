@@ -10,20 +10,22 @@ services:
     volumes:
     - "blaze-data:/app/data"
 
+  # Please uncomment the SNOMED CT lines if you have the release files.
+  # Otherwise all SNOMED CT concepts will be flagged as non-matching.
   terminology-server:
     image: "samply/blaze:1.2"
     environment:
       JAVA_TOOL_OPTIONS: "-Xmx4g"
       ENABLE_TERMINOLOGY_SERVICE: "true"
       ENABLE_TERMINOLOGY_LOINC: "true"
-      ENABLE_TERMINOLOGY_SNOMED_CT: "true"
-      SNOMED_CT_RELEASE_PATH: "/app/sct-release"
+      #ENABLE_TERMINOLOGY_SNOMED_CT: "true"
+      #SNOMED_CT_RELEASE_PATH: "/app/sct-release"
       LOG_LEVEL: "debug"
     ports:
     - "8082:8080"
     volumes:
     - "blaze-terminology-data:/app/data"
-    - "/Users/akiel/SnomedCT_Germany-EditionRelease_PRODUCTION_20241115T120000Z:/app/sct-release"
+    #- "./SnomedCT_Germany-EditionRelease_PRODUCTION_20241115T120000Z:/app/sct-release"
 
 volumes:
   blaze-data:
