@@ -12,6 +12,8 @@ The scripts have the following goals:
 
 ## Architecture
 
+The CQL scripts in this repository need the [blazectl][5] CLI tool to drive the DQA process shown in the following sequence diagram. However using blazectl is only a convenience. Everything is available via standard FHIR APIs documented in the [Blaze Docs][6] or [FHIR R4 - Quality Reporting Module][2].  
+
 ```mermaid
 sequenceDiagram
     participant blazectl
@@ -32,7 +34,9 @@ sequenceDiagram
     blazectl->>blazectl: render-report
 ```
 
-# Preparation
+# Minimal Example Deployment
+
+This repository contains a simple, minimal [Docker Compose file](./docker-compose.yml) that can be used to spin up da Blaze FHIR server and a Blaze terminology server. Other deployments with other CQL enabled FHIR servers and for example [Ontoserver][7] as terminology server are possible.
 
 ```sh
 docker compose up -d
@@ -58,3 +62,6 @@ blazectl --server http://localhost:8080/fhir evaluate-measure scripts/condition.
 [2]: <https://hl7.org/fhir/R4/clinicalreasoning-quality-reporting.html>
 [3]: <https://cql.hl7.org>
 [4]: <https://mii-termserv.de>
+[5]: <https://github.com/samply/blazectl>
+[6]: <https://samply.github.io/blaze/cql-queries/api.html>
+[7]: <https://ontoserver.csiro.au/>
