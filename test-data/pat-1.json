@@ -241,7 +241,7 @@
             },
             {
               "system": "http://snomed.info/sct",
-              "code": "13420004",
+              "code": "1342000",
               "version": "http://snomed.info/sct/900000000000207008/version/20230731",
               "display": "Post measles otitis media (disorder)"
             }
@@ -267,7 +267,7 @@
         "clinicalStatus": {
           "coding": [
             {
-              "code": "active",
+              "code": "foo",
               "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
             }
           ]

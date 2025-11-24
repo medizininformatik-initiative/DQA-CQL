@@ -5,11 +5,11 @@ group:
   population:
   - expression: InInitialPopulation
   stratifier:
+  - code: "Referenz Primaerdiagnose missing"
+    expression: "Referenz Primaerdiagnose missing"
+    
   - code: "Feststellungsdatum missing"
     expression: "Feststellungsdatum missing"
-
-  - code: "ReferenzPrimaerdiagnose missing"
-    expression: "ReferenzPrimaerdiagnose missing"
 
   - code: "Klinischer Status observed"
     expression: "Klinischer Status observed"
@@ -23,6 +23,10 @@ group:
 
   - code: "Diagnose observed"
     expression: "Diagnose observed"
+  - code: "Diagnose SNOMED CT non-matching"
+    expression: "Diagnose SNOMED CT non-matching"
+  - code: "Diagnose Orphanet non-matching"
+    expression: "Diagnose Orphanet non-matching"
 
   - code: "Diagnosesicherheit observed"
     expression: "Diagnosesicherheit observed"

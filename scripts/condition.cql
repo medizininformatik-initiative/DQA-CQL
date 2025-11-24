@@ -4,6 +4,8 @@ include FHIRHelpers version '4.0.0'
 
 valueset "Klinischer Status": 'http://hl7.org/fhir/ValueSet/condition-clinical'
 valueset "Verifizierungsstatus": 'http://hl7.org/fhir/ValueSet/condition-ver-status'
+valueset "Diagnose SNOMED CT": 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct'
+valueset "Diagnose Orphanet": 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet'
 valueset Diagnosesicherheit: 'https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ICD_DIAGNOSESICHERHEIT'
 valueset Seitenlokalisation: 'https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ICD_SEITENLOKALISATION'
 valueset "Mehrfachkodierungs-Kennzeichen": 'http://fhir.de/ValueSet/icd-10-gm-mehrfachcodierungs-kennzeichen'
@@ -28,13 +30,13 @@ define function NonMatching(concept CodeableConcept, valueset System.ValueSet):
   else
     concept
 
+// Referenz Primaerdiagnose
+define function "Referenz Primaerdiagnose missing"(condition Condition):
+  not exists condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-related').value
+
 // Feststellungsdatum
 define function "Feststellungsdatum missing"(condition Condition):
   not exists condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate').value
-
-// ReferenzPrimaerdiagnose
-define function "ReferenzPrimaerdiagnose missing"(condition Condition):
-  not exists condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-related').value
 
 // Klinischer Status
 define function "Klinischer Status observed"(condition Condition):
@@ -53,6 +55,12 @@ define function "Verifizierungsstatus non-matching"(condition Condition):
 // Diagnose
 define function "Diagnose observed"(condition Condition):
   condition.code
+
+define function "Diagnose SNOMED CT non-matching"(condition Condition):
+  NonMatching(ToCodeableConcept(condition.code.coding.where(system = 'http://snomed.info/sct')), "Diagnose SNOMED CT")
+
+define function "Diagnose Orphanet non-matching"(condition Condition):
+  NonMatching(ToCodeableConcept(condition.code.coding.where(system = 'http://www.orpha.net')), "Diagnose Orphanet")
 
 // Diagnosesicherheit
 define function "Diagnosesicherheit observed"(condition Condition):

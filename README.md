@@ -53,6 +53,8 @@ blazectl --server http://localhost:8080/fhir evaluate-measure scripts/condition.
 blazectl --server http://localhost:8080/fhir evaluate-measure scripts/encounter.yml | blazectl render-report > reports/encounter.html
 ```
 
+A [Script Guide](docs/script-guide.md), explaining how the scripts are build, is available.
+
 ## Example Reports
 
 Rendered HTML reports of the example scripts over the test data can be found in the `reports` directory.
