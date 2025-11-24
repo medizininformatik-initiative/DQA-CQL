@@ -3,9 +3,9 @@
 The docker compose file contains a minimal example deployment for testing purposes. 
 
 > [!CAUTION]
-> Don't use the deployment is production.
+> Don't use the deployment in production.
 
-The scripts use the SNOMED CT terminology but will also work without it. Because every one using SNOMED CT needs a license, you have to provide the release files yourself. In case you have a [SNOMED MLDS][1] account, you can download the SNOMED CT Germany Edition release packages, unzip them and edit the `docker-compose.yml` accordingly. 
+The scripts use the SNOMED CT terminology, but will also work without it. Because everyone using SNOMED CT needs a license, you have to provide the release files yourself. In case you have a [SNOMED MLDS][1] account, you can download the SNOMED CT Germany Edition release packages, unzip them and edit the `docker-compose.yml` accordingly. 
 
 After that, please start the Docker containers: 
 
