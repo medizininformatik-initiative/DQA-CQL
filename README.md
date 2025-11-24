@@ -13,10 +13,23 @@ The scripts have the following goals:
 ## Architecture
 
 ```mermaid
-architecture-beta
-    service ts(server)[Terminology Server]
-    service db(server)[FHIR Server]
-    db:L -- R:ts
+sequenceDiagram
+    participant blazectl
+    participant FHIR Server
+    participant Terminology Server
+    blazectl->>FHIR Server: create Measure/Library resources
+    activate FHIR Server
+    FHIR Server-->>blazectl: ok
+    deactivate FHIR Server
+    blazectl->>FHIR Server: execute $evaluate-measure operation
+    activate FHIR Server
+    FHIR Server->>Terminology Server: execute $validate-code operation
+    activate Terminology Server
+    Terminology Server-->>FHIR Server: valid/invalid
+    deactivate Terminology Server
+    FHIR Server-->>blazectl: MeasureReport
+    deactivate FHIR Server
+    blazectl->>blazectl: render-report
 ```
 
 # Preparation
