@@ -4,7 +4,7 @@ services:
     environment:
       JAVA_TOOL_OPTIONS: "-Xmx4g"
       EXTERN_TERMINOLOGY_SERVICE_URL: "http://terminology-server:8080/fhir"
-      LOG_LEVEL: "trace"
+      LOG_LEVEL: "debug"
     ports:
     - "8080:8080"
     volumes:
