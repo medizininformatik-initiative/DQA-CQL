@@ -13,7 +13,10 @@ The scripts have the following goals:
 ## Architecture
 
 ```mermaid
-  info
+architecture-beta
+    service ts[Terminology Server]
+    service db[FHIR Server]
+    db:L -- R:ts
 ```
 
 # Preparation
