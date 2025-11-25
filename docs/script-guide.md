@@ -6,8 +6,8 @@ A combination of Measure Stratifier Definition and CQL Library Function is used 
 
 ```mermaid
 flowchart LR
-    Stratifier["Measure\nStratifier Definition"]
-    Function["CQL Library\nFunction"]
+    Stratifier["Measure Stratifier Definition"]
+    Function["CQL Library Function"]
     evaluate["$evaluate-measure"]
     Report["Report Strata Output"]
     Stratifier --> evaluate
