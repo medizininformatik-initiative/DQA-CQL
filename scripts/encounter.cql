@@ -15,7 +15,8 @@ valueset Kontaktebene: 'http://fhir.de/ValueSet/kontaktebene-de'
 context Patient
 
 define InInitialPopulation:
-  [Encounter]
+  from [Encounter] E
+    where exists E.meta.profile.where(StartsWith($this, 'https://www.medizininformatik-initiative.de/fhir/core/modul-fall/StructureDefinition/KontaktGesundheitseinrichtung'))
 
 define function ToCodeableConcept(codings List<Coding>):
   if exists codings then

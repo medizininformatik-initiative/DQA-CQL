@@ -14,7 +14,8 @@ valueset "Körperstelle": 'http://hl7.org/fhir/ValueSet/body-site'
 context Patient
 
 define InInitialPopulation:
-  [Condition]
+  from [Condition] C
+    where exists C.meta.profile.where(StartsWith($this, 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose'))
 
 define function ToCodeableConcept(codings List<Coding>):
   if exists codings then
