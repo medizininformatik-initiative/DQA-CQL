@@ -36,16 +36,35 @@ blazectl --server http://localhost:8080/fhir count-resources
 Should output similar numbers:
 
 ```text
-Condition                         : 12111
-Consent                           :  9687
-Encounter                         : 24078
-Medication                        :   105
-MedicationAdministration          :   119
-MedicationStatement               :  1785
-Observation                       : 16979
-Patient                           : 12036
-Procedure                         :    15
+BodyStructure                     :     1
+CarePlan                          :     1
+Composition                       :     1
+Condition                         : 12125
+Consent                           :  9697
+Device                            :    33
+DeviceMetric                      :    10
+DiagnosticReport                  :    13
+Encounter                         : 24089
+FamilyMemberHistory               :     2
+ImagingStudy                      :     1
+Library                           :    14
+List                              :    17
+Measure                           :    14
+Medication                        :   132
+MedicationAdministration          :   143
+MedicationRequest                 :    26
+MedicationStatement               :  1813
+Observation                       : 17051
+Organization                      :    30
+Patient                           : 12047
+Practitioner                      :    12
+PractitionerRole                  :    10
+Procedure                         :    40
+ServiceRequest                    :    13
+Specimen                          :    21
 StructureDefinition               :   185
+Substance                         :     1
+Task                              :     2
 -----------------------------------------
-total                             : 77100
+total                             : 77544
 ```
