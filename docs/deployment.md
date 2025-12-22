@@ -61,5 +61,9 @@ After that please run `terminology-data/upload-all.sh` to import all of that res
 curl -s 'http://localhost:8082/fhir/metadata?mode=terminology' | jq -r '.codeSystem | length'
 ```
 
+### Updating the Terminology Resources
+
+Please change the version number of `terminology-data/package.json` and run `make -C terminology-data update` in order to update the package.
+
 [1]: <https://mlds.ihtsdotools.org>
 [2]: <https://gitlab.com/mii-termserv/fhir-resources/mii-kerndatensatz/de.medizininformatikinitiative.kerndatensatz.terminology.bill-of-materials>
