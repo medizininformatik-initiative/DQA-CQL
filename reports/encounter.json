@@ -4,7 +4,7 @@
     {
       "url": "https://samply.github.io/blaze/fhir/StructureDefinition/eval-duration",
       "valueQuantity": {
-        "value": 0.132136708,
+        "value": 0.93177,
         "unit": "s",
         "system": "http://unitsofmeasure.org",
         "code": "s"
@@ -24,8 +24,8 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "urn:uuid:c4a589bb-a129-4edd-a9c7-6821de1a343f",
-  "date": "2026-01-27T13:05:23.978437385Z",
+  "measure": "urn:uuid:b4d105a7-6526-4782-8737-9ba58ee65d5f",
+  "date": "2026-02-24T08:39:10.413702922Z",
   "period": {
     "start": "1900",
     "end": "2200"

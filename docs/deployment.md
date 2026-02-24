@@ -10,7 +10,7 @@ The scripts use the SNOMED CT terminology, but will also work without it. Becaus
 After that, please start the Docker containers: 
 
 ```sh
-docker compose up -d
+docker compose up --wait
 ```
 
 On port 8080, the data server should run. You can test that via:

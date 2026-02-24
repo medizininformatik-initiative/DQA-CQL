@@ -4,7 +4,7 @@
     {
       "url": "https://samply.github.io/blaze/fhir/StructureDefinition/eval-duration",
       "valueQuantity": {
-        "value": 0.084230958,
+        "value": 0.208277083,
         "unit": "s",
         "system": "http://unitsofmeasure.org",
         "code": "s"
@@ -24,8 +24,8 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "urn:uuid:c8764574-398d-44c7-8aa5-9246dda8c9e5",
-  "date": "2026-01-27T13:05:35.072212209Z",
+  "measure": "urn:uuid:ab8f3c15-ff08-4169-b4f7-1e54d4bf0ba6",
+  "date": "2026-02-24T08:38:56.872796013Z",
   "period": {
     "start": "1900",
     "end": "2200"
@@ -288,448 +288,6 @@
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
                     "version": "2020",
-                    "code": "E78.0"
-                  }
-                ],
-                "text": "Reine Hypercholesterinämie"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "N18.4"
-                  }
-                ],
-                "text": "Chronische Niereninsuffizienz"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I25.22"
-                  }
-                ],
-                "text": "Myokardinfarkt in Vergangenheit"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I10"
-                  }
-                ],
-                "text": "Essentielle (primäre) Hypertonie"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "D61.10"
-                  }
-                ],
-                "text": "Anämie"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I48.9"
-                  }
-                ],
-                "text": "Vorhofflimmern"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I10.90"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 3
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I50.9"
-                  }
-                ],
-                "text": "Herzinsuffizienz"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "A49"
-                  }
-                ],
-                "text": "Sepsis"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2024",
-                    "code": "C34.1"
-                  },
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
-                    "version": "2024",
-                    "code": "I30011",
-                    "display": "Bösartige Neubildung des Lungenoberlappens"
-                  },
-                  {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "254637007",
-                    "display": "Non-small cell lung cancer (disorder)"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I25.2"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I63.5"
-                  }
-                ],
-                "text": "z.N. Lakunär A. cerebri media-Infarkt rechts"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "E78.2"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2023",
-                    "code": "I25.9"
-                  },
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
-                    "version": "2023",
-                    "code": "I26852",
-                    "display": "Chronische ischämische Herzkrankheit"
-                  },
-                  {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "413838009",
-                    "display": "Chronic ischemic heart disease (disorder)"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "N18.2"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I34.0"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I50.12"
-                  }
-                ],
-                "text": "Linksherzinsuffizienz"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
                     "code": "K35.30"
                   }
                 ],
@@ -755,110 +313,10 @@
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
                     "version": "2020",
-                    "code": "E11.91"
+                    "code": "E78.0"
                   }
                 ],
-                "text": "Diabetes mellitus TypII"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "J44.19"
-                  }
-                ],
-                "text": "COPD Exazerbation"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "N04.2"
-                  }
-                ],
-                "text": "Diffuse membranöse Glomerulonephritis"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I10.90"
-                  }
-                ],
-                "text": "Hypertonie"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 3
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I21.1"
-                  }
-                ],
-                "text": "Herzinfarkt"
+                "text": "Reine Hypercholesterinämie"
               },
               "population": [
                 {
@@ -879,86 +337,22 @@
                 "coding": [
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "J45.9"
-                  }
-                ],
-                "text": "Asthma bronchiale late onset"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
+                    "version": "2024",
+                    "code": "C34.1"
                   },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
                   {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I80.28"
-                  }
-                ],
-                "text": "TVT links"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
+                    "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
+                    "version": "2024",
+                    "code": "I30011",
+                    "display": "Bösartige Neubildung des Lungenoberlappens"
                   },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
                   {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "E86"
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
+                    "code": "254637007",
+                    "display": "Non-small cell lung cancer (disorder)"
                   }
-                ],
-                "text": "Dehydradatation"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 4
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "Y57.9"
-                  }
-                ],
-                "text": "Komplikationen durch Arzneimittel oder Drogen"
+                ]
               },
               "population": [
                 {
@@ -1040,11 +434,459 @@
                 "coding": [
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2023",
-                    "code": "H67.1",
-                    "display": "Otitis media bei anderenorts klassifizierten Viruskrankheiten"
+                    "version": "2020",
+                    "code": "I25.22"
+                  }
+                ],
+                "text": "Myokardinfarkt in Vergangenheit"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "J45.9"
+                  }
+                ],
+                "text": "Asthma bronchiale late onset"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "N18.2"
+                  }
+                ],
+                "text": "Chronische Nierenkrankheit, Stadium 2"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I50.9"
+                  }
+                ],
+                "text": "Herzinsuffizienz"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "R50.80"
+                  }
+                ],
+                "text": "Fieber unklarer Genese"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I95.0"
+                  }
+                ],
+                "text": "Idiopathische Hypotonie"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 10792
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I10.91"
+                  }
+                ],
+                "text": "arterielle Hypertonie"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I10.91"
+                  }
+                ],
+                "text": "Arterielle Hypertonie"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "E11.90"
+                  }
+                ],
+                "text": "Diabetes mellitus, Typ 2: Ohne Komplikationen: Nicht als entgleist bezeichnet"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "N04.2"
+                  }
+                ],
+                "text": "Diffuse membranöse Glomerulonephritis"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I10.91"
+                  }
+                ],
+                "text": "Essentielle Hypertonie, nicht näher bezeichnet: Mit Angabe einer hypertensiven Krise"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "F10.1"
+                  }
+                ],
+                "text": "Psychische und Verhaltensstörungen durch Alkohol : Schädlicher Gebrauch"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I80.28"
+                  }
+                ],
+                "text": "TVT links"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "M79.65"
                   }
                 ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I50.12"
+                  }
+                ],
+                "text": "Linksherzinsuffizienz"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I48.0"
+                  }
+                ],
+                "text": "Vorhofflimmern, paroxysmal"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 68
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I34.0"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "E03.8"
+                  }
+                ],
+                "text": "Hypothyreose"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "F33.0"
+                  }
+                ],
+                "text": "Depression (leicht)"
               },
               "population": [
                 {
@@ -1091,10 +933,121 @@
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
                     "version": "2020",
-                    "code": "W01"
+                    "code": "I63.5"
                   }
                 ],
-                "text": "Sturz"
+                "text": "z.N. Lakunär A. cerebri media-Infarkt rechts"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "E11.91"
+                  }
+                ],
+                "text": "Diabetes mellitus TypII"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "K29.0"
+                  }
+                ],
+                "text": "akute erosive Gastritis mit Blutung"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "E86"
+                  }
+                ],
+                "text": "Dehydradatation"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2022",
+                    "code": "K29.5"
+                  },
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
+                    "version": "2022",
+                    "code": "I30016",
+                    "display": "Chronische Gastritis"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
+                    "code": "4556007",
+                    "display": "Gastritis (disorder)"
+                  }
+                ]
               },
               "population": [
                 {
@@ -1141,10 +1094,58 @@
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
                     "version": "2020",
-                    "code": "E78.2"
+                    "code": "F41.0"
                   }
                 ],
-                "text": "gemischte Hyperlipidämie"
+                "text": "Schlafstörung"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "N18.2"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "M79.69"
+                  }
+                ]
               },
               "population": [
                 {
@@ -1157,6 +1158,725 @@
                     ]
                   },
                   "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I10.90"
+                  }
+                ],
+                "text": "essentielle Hypertonie"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2023",
+                    "code": "H67.1",
+                    "display": "Otitis media bei anderenorts klassifizierten Viruskrankheiten"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "N18.4"
+                  }
+                ],
+                "text": "Chronische Niereninsuffizienz"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "J44.99"
+                  }
+                ],
+                "text": "COPD"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "Z96.64"
+                  }
+                ],
+                "text": "z.N. Hüft-Totalendoprothese (-TEP) rechts"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "E11.60"
+                  }
+                ],
+                "text": "Diabetes mellitus TypII"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "J44.19"
+                  }
+                ],
+                "text": "COPD Exazerbation"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I48.9"
+                  }
+                ],
+                "text": "Vorhofflimmern"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2023",
+                    "code": "I25.9"
+                  },
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
+                    "version": "2023",
+                    "code": "I26852",
+                    "display": "Chronische ischämische Herzkrankheit"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
+                    "code": "413838009",
+                    "display": "Chronic ischemic heart disease (disorder)"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I48.1"
+                  }
+                ],
+                "text": "Vorhofflimmern, persistierend"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 140
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "D61.10"
+                  }
+                ],
+                "text": "Anämie"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "C50.4"
+                  }
+                ],
+                "text": "Mammakarzinom"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "G81.9"
+                  }
+                ],
+                "text": "Halbseitensymptomatik"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "R60.1"
+                  }
+                ],
+                "text": "Generalisiertes Ödem"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2019",
+                    "code": "G43.9"
+                  },
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
+                    "version": "2019",
+                    "code": "I18412",
+                    "display": "Migräne"
+                  },
+                  {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
+                    "code": "37796009",
+                    "display": "Migraine (disorder)"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "N04"
+                  }
+                ],
+                "text": "Nephrotisches Syndrom"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "C71.3"
+                  }
+                ],
+                "text": "Glioblastoma multiforme"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "Y57.9"
+                  }
+                ],
+                "text": "Komplikationen durch Arzneimittel oder Drogen"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "E11.91"
+                  }
+                ],
+                "text": "Diabetes Mellitus Typ II"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "A49"
+                  }
+                ],
+                "text": "Sepsis"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I10"
+                  }
+                ],
+                "text": "Essentielle (primäre) Hypertonie"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I10.90"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "C76.0"
+                  }
+                ],
+                "text": "CUP Hals"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I10.00"
+                  }
+                ],
+                "text": "Benigne essentielle Hypertonie, ohne Angabe einer hypertensiven Krise"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "E66.01"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "F17.1"
+                  }
+                ],
+                "text": "Psychische und Verhaltensstörungen durch Tabak: Schädlicher Gebrauch"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I10.90"
+                  }
+                ],
+                "text": "Hypertonie"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 3
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "E78.2"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
                 }
               ]
             },
@@ -1227,10 +1947,134 @@
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
                     "version": "2020",
-                    "code": "K29.0"
+                    "code": "N39.0"
                   }
                 ],
-                "text": "akute erosive Gastritis mit Blutung"
+                "text": "Akuter Harnwegsinfekt"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 4
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I25.2"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "E78.2"
+                  }
+                ],
+                "text": "gemischte Hyperlipidämie"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "M81.9"
+                  }
+                ],
+                "text": "Osteroporose"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "R50"
+                  }
+                ],
+                "text": "Fieber"
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+                    "version": "2020",
+                    "code": "I21.1"
+                  }
+                ],
+                "text": "Herzinfarkt"
               },
               "population": [
                 {
@@ -1277,46 +2121,10 @@
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
                     "version": "2020",
-                    "code": "C76.0"
+                    "code": "C61"
                   }
                 ],
-                "text": "CUP Hals"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2023",
-                    "code": "N80.1"
-                  },
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
-                    "version": "2023",
-                    "code": "I133980",
-                    "display": "Endometriose des Ovars"
-                  },
-                  {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "129103003",
-                    "display": "Endometriosis (disorder)"
-                  }
-                ]
+                "text": "Prostata-Ca"
               },
               "population": [
                 {
@@ -1338,160 +2146,10 @@
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
                     "version": "2020",
-                    "code": "N39.0"
+                    "code": "W01"
                   }
                 ],
-                "text": "Akuter Harnwegsinfekt"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 4
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I48.1"
-                  }
-                ],
-                "text": "Vorhofflimmern, persistierend"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 140
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "G81.9"
-                  }
-                ],
-                "text": "Halbseitensymptomatik"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "Z96.64"
-                  }
-                ],
-                "text": "z.N. Hüft-Totalendoprothese (-TEP) rechts"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "M17.4"
-                  }
-                ],
-                "text": "Gonarthrose re>li"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "R50.80"
-                  }
-                ],
-                "text": "Fieber unklarer Genese"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 4
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "F33.0"
-                  }
-                ],
-                "text": "Depression (leicht)"
+                "text": "Sturz"
               },
               "population": [
                 {
@@ -1504,81 +2162,6 @@
                     ]
                   },
                   "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I10.91"
-                  }
-                ],
-                "text": "Essentielle Hypertonie, nicht näher bezeichnet: Mit Angabe einer hypertensiven Krise"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 4
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "R50"
-                  }
-                ],
-                "text": "Fieber"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "E11.91"
-                  }
-                ],
-                "text": "Diabetes Mellitus Typ II"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
                 }
               ]
             },
@@ -1601,167 +2184,6 @@
                     "version": "http://snomed.info/sct/900000000000207008/version/20230731",
                     "code": "447886005",
                     "display": "Adenocarcinoma of anorectum (disorder)"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I10.90"
-                  }
-                ],
-                "text": "essentielle Hypertonie"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 3
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "M81.9"
-                  }
-                ],
-                "text": "Osteroporose"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "N18.2"
-                  }
-                ],
-                "text": "Chronische Nierenkrankheit, Stadium 2"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "R60.1"
-                  }
-                ],
-                "text": "Generalisiertes Ödem"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I10.91"
-                  }
-                ],
-                "text": "arterielle Hypertonie"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2022",
-                    "code": "K29.5"
-                  },
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
-                    "version": "2022",
-                    "code": "I30016",
-                    "display": "Chronische Gastritis"
-                  },
-                  {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "4556007",
-                    "display": "Gastritis (disorder)"
                   }
                 ]
               },
@@ -1820,368 +2242,20 @@
                 "coding": [
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "E03.8"
-                  }
-                ],
-                "text": "Hypothyreose"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "F10.1"
-                  }
-                ],
-                "text": "Psychische und Verhaltensstörungen durch Alkohol : Schädlicher Gebrauch"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I10.91"
-                  }
-                ],
-                "text": "Arterielle Hypertonie"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I48.0"
-                  }
-                ],
-                "text": "Vorhofflimmern, paroxysmal"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 68
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "C61"
-                  }
-                ],
-                "text": "Prostata-Ca"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "C71.3"
-                  }
-                ],
-                "text": "Glioblastoma multiforme"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "C50.4"
-                  }
-                ],
-                "text": "Mammakarzinom"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "N04"
-                  }
-                ],
-                "text": "Nephrotisches Syndrom"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "F17.1"
-                  }
-                ],
-                "text": "Psychische und Verhaltensstörungen durch Tabak: Schädlicher Gebrauch"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "E11.90"
-                  }
-                ],
-                "text": "Diabetes mellitus, Typ 2: Ohne Komplikationen: Nicht als entgleist bezeichnet"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I95.0"
-                  }
-                ],
-                "text": "Idiopathische Hypotonie"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 10792
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2022",
-                    "code": "C16.9"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "M79.69"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "I10.00"
-                  }
-                ],
-                "text": "Benigne essentielle Hypertonie, ohne Angabe einer hypertensiven Krise"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2019",
-                    "code": "G43.9"
+                    "version": "2023",
+                    "code": "N80.1"
                   },
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/alpha-id",
-                    "version": "2019",
-                    "code": "I18412",
-                    "display": "Migräne"
+                    "version": "2023",
+                    "code": "I133980",
+                    "display": "Endometriose des Ovars"
                   },
                   {
                     "system": "http://snomed.info/sct",
                     "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "37796009",
-                    "display": "Migraine (disorder)"
+                    "code": "129103003",
+                    "display": "Endometriosis (disorder)"
                   }
                 ]
               },
@@ -2196,54 +2270,6 @@
                     ]
                   },
                   "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "E66.01"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "M79.65"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 2
                 }
               ]
             },
@@ -2277,36 +2303,10 @@
                 "coding": [
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "F41.0"
+                    "version": "2022",
+                    "code": "C16.9"
                   }
-                ],
-                "text": "Schlafstörung"
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
-                    "version": "2020",
-                    "code": "J44.99"
-                  }
-                ],
-                "text": "COPD"
+                ]
               },
               "population": [
                 {
@@ -2353,10 +2353,10 @@
                   {
                     "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
                     "version": "2020",
-                    "code": "E11.60"
+                    "code": "M17.4"
                   }
                 ],
-                "text": "Diabetes mellitus TypII"
+                "text": "Gonarthrose re>li"
               },
               "population": [
                 {
@@ -2368,7 +2368,7 @@
                       }
                     ]
                   },
-                  "count": 1
+                  "count": 2
                 }
               ]
             }
@@ -2692,6 +2692,81 @@
                   {
                     "system": "http://snomed.info/sct",
                     "version": "http://snomed.info/sct/900000000000207008/version/20230731",
+                    "code": "281231009",
+                    "display": "Vascular structure of head (body structure)"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
+                    "code": "45653009",
+                    "display": "Structure of upper lobe of lung (body structure)"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
+                    "code": "281088000",
+                    "display": "Structure of anus and/or rectum (body structure)"
+                  }
+                ]
+              },
+              "population": [
+                {
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+                        "code": "initial-population"
+                      }
+                    ]
+                  },
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "value": {
+                "coding": [
+                  {
+                    "system": "http://snomed.info/sct",
+                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
                     "code": "80891009",
                     "display": "Heart structure (body structure)"
                   }
@@ -2717,8 +2792,8 @@
                   {
                     "system": "http://snomed.info/sct",
                     "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "955009",
-                    "display": "Bronchial structure (body structure)"
+                    "code": "25342003",
+                    "display": "Middle ear structure (body structure)"
                   }
                 ]
               },
@@ -2792,83 +2867,8 @@
                   {
                     "system": "http://snomed.info/sct",
                     "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "281088000",
-                    "display": "Structure of anus and/or rectum (body structure)"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "281231009",
-                    "display": "Vascular structure of head (body structure)"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "25342003",
-                    "display": "Middle ear structure (body structure)"
-                  }
-                ]
-              },
-              "population": [
-                {
-                  "code": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/measure-population",
-                        "code": "initial-population"
-                      }
-                    ]
-                  },
-                  "count": 1
-                }
-              ]
-            },
-            {
-              "value": {
-                "coding": [
-                  {
-                    "system": "http://snomed.info/sct",
-                    "version": "http://snomed.info/sct/900000000000207008/version/20230731",
-                    "code": "45653009",
-                    "display": "Structure of upper lobe of lung (body structure)"
+                    "code": "955009",
+                    "display": "Bronchial structure (body structure)"
                   }
                 ]
               },

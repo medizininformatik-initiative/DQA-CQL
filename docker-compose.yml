@@ -1,6 +1,6 @@
 services:
   data-server:
-    image: "samply/blaze:1.4.0"
+    image: "samply/blaze:1.5.1@sha256:0005ff60713382264d3ffaa4a800b6f41e6cf928ccc58ed8c7fb72569f01a366"
     environment:
       JAVA_TOOL_OPTIONS: "-Xmx4g"
       EXTERN_TERMINOLOGY_SERVICE_URL: "http://terminology-server:8080/fhir"
@@ -9,11 +9,17 @@ services:
     - "8080:8080"
     volumes:
     - "blaze-data:/app/data"
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://localhost:8080/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
   # Please uncomment the SNOMED CT lines if you have the release files.
   # Otherwise all SNOMED CT concepts will be flagged as non-matching.
   terminology-server:
-    image: "samply/blaze:1.4.0"
+    image: "samply/blaze:1.5.1@sha256:0005ff60713382264d3ffaa4a800b6f41e6cf928ccc58ed8c7fb72569f01a366"
     environment:
       JAVA_TOOL_OPTIONS: "-Xmx4g"
       ENABLE_TERMINOLOGY_SERVICE: "true"
@@ -26,6 +32,12 @@ services:
     volumes:
     - "blaze-terminology-data:/app/data"
     #- "./SnomedCT_Germany-EditionRelease_PRODUCTION_20251115T120000Z:/app/sct-release"
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://localhost:8080/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
 volumes:
   blaze-data:
