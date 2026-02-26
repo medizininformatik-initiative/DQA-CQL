@@ -1,0 +1,63 @@
+library: Z:/Projekte/08_DIZ_intern/DIZ/FHIR-DQA-App/code/src/DQA-CQL/MedicationRequest.cql
+group: 
+- type: MedicationRequest
+  code: MedicationRequest
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values MedicationRequest.id"
+    expression: "Missing values MedicationRequest.id"
+  
+  
+  - code: "Missing values MedicationRequest.meta"
+    expression: "Missing values MedicationRequest.meta"
+
+  - code: "Missing values Status"
+    expression: "Missing values Status"
+  
+  - code: "Missing values Intention"
+    expression: "Missing values Intention"
+
+  - code: "Missing values medicationReference"
+    expression: "Missing values medicationReference"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+  
+  - code: "Missing values encounter"
+    expression: "Missing values encounter"
+
+  - code: "Missing values authoredOn"
+    expression: "Missing values authoredOn"
+
+  - code: "Missing values dosageInstruction.timing"
+    expression: "Missing values dosageInstruction.timing"
+
+  - code: "Missing values dosage.route"
+    expression: "Missing values dosage.route"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+
+  - code: "Intention observed"
+    expression: "Intention observed"
+
+  - code: "Inadmissible categorical values Intention"
+    expression: "Inadmissible categorical values Intention"
+
+  - code: "Weg der Anwendung observed"
+    expression: "Weg der Anwendung observed"
+
+  - code: "Inadmissible categorical values dosage.route"
+    expression: "Inadmissible categorical values dosage.route"

@@ -1,0 +1,54 @@
+library: Z:/Projekte/08_DIZ_intern/DIZ/FHIR-DQA-App/code/src/DQA-CQL/MedicationAdministration.cql
+group: 
+- type: MedicationAdministration
+  code: MedicationAdministration
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values MedicationAdministration.id"
+    expression: "Missing values MedicationAdministration.id"
+
+  - code: "Missing values MedicationAdministration.meta"
+    expression: "Missing values MedicationAdministration.meta"
+
+  - code: "Missing values MedicationAdministration.status"
+    expression: "Missing values MedicationAdministration.status"
+
+  - code: "Missing values MedicationAdministration.medicationReference"
+    expression: "Missing values MedicationAdministration.medicationReference"
+
+  - code: "Missing values Subject"
+    expression: "Missing values Subject"
+
+  - code: "Missing values Context"
+    expression: "Missing values Context"
+
+  - code: "Missing values request"
+    expression: "Missing values request"
+
+  - code: "Effective type"
+    expression: "Effective type"
+
+  - code: "Missing values Effective"
+    expression: "Missing values Effective"
+
+
+#Consistency 
+## DQI: Inadmissible categorical values
+
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+  - code: "Weg der Anwendung observed"
+    expression: "Weg der Anwendung observed"
+
+  - code: "Inadmissible categorical values dosage.route"
+    expression: "Inadmissible categorical values dosage.route"

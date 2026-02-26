@@ -1,0 +1,118 @@
+library: Z:/Projekte/08_DIZ_intern/DIZ/FHIR-DQA-App/code/src/DQA-CQL/Observation.cql
+group: 
+- type: Observation
+  code: Observation
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+  - code: "Missing values Observation.id"
+    expression: "Missing values Observation.id"
+
+  - code: "Missing values meta"
+    expression: "Missing values meta"
+
+  - code: "Missing values identifierType"
+    expression: "Missing values identifierType"
+
+  - code: "Missing values identifier System"
+    expression: "Missing values identifier System"
+
+  - code: "Missing values identifier Value"
+    expression: "Missing values identifier Value"
+
+  - code: "Missing values identifier assigner"
+    expression: "Missing values identifier assigner"
+
+  - code: "Missing values status"
+    expression: "Missing values status"
+
+  - code: "Missing values loinc-observation"
+    expression: "Missing values loinc-observation"
+
+  - code: "Missing values observation-category"
+    expression: "Missing values observation-category"
+
+  - code: "Missing values Laborgruppe"
+    expression: "Missing values Laborgruppe"
+
+  - code: "Missing values Laborparameter"
+    expression: "Missing values Laborparameter"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+  - code: "Missing values encounter"
+    expression: "Missing values encounter"
+
+  - code: "Missing values Untersuchungszeitpunkt"
+    expression: "Missing values Untersuchungszeitpunkt"
+
+  - code: "Missing values Messwert"
+    expression: "Missing values Messwert"
+
+  - code: "Missing values Interpretation"
+    expression: "Missing values Interpretation"
+
+  - code: "Missing values Referenzbereich"
+    expression: "Missing values Referenzbereich"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+### identifierType
+  - code: "identifierType observed"
+    expression: "identifierType observed"
+
+  - code: "Inadmissible categorical values identifierType"
+    expression: "Inadmissible categorical values identifierType"
+
+### Status
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+### LOINC Observation
+  - code: "loinc-observation observed"
+    expression: "loinc-observation observed"
+
+  - code: "Inadmissible categorical values loinc-observation"
+    expression: "Inadmissible categorical values loinc-observation"
+
+### Observation Category
+  - code: "observation-category observed"
+    expression: "observation-category observed"
+
+  - code: "Inadmissible categorical values observation-category"
+    expression: "Inadmissible categorical values observation-category"
+
+### Laborparameter
+  - code: "Laborparameter Loinc observed"
+    expression: "Laborparameter Loinc observed"
+
+  - code: "Inadmissible categorical values Laborparameter Loinc"
+    expression: "Inadmissible categorical values Laborparameter Loinc"
+
+
+### Laborergebnis_Qualitativ
+  - code: "Laborergebnis_Qualitativ observed"
+    expression: "Laborergebnis_Qualitativ observed"
+
+  - code: "Inadmissible categorical values Laborergebnis_Qualitativ"
+    expression: "Inadmissible categorical values Laborergebnis_Qualitativ"
+
+### Interpretation
+  - code: "Interpretation observed"
+    expression: "Interpretation observed"
+
+  - code: "Inadmissible categorical values Interpretation"
+    expression: "Inadmissible categorical values Interpretation"
+
+
+#Contradictions
+### DQI: Logical Contradictions
+
+  - code: "Dokumentationsdatum ist vor ist vor Untersuchungszeitpunkt"
+    expression: "Dokumentationsdatum ist vor ist vor Untersuchungszeitpunkt"

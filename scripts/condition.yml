@@ -1,61 +1,111 @@
-library: scripts/condition.cql
-group:
+library: Z:/Projekte/08_DIZ_intern/DIZ/FHIR-DQA-App/code/src/DQA-CQL/condition.cql
+group: 
 - type: Condition
   code: Condition
   population:
   - expression: InInitialPopulation
   stratifier:
-  - code: "Referenz Primaerdiagnose missing"
-    expression: "Referenz Primaerdiagnose missing"
-    
-  - code: "Feststellungsdatum missing"
-    expression: "Feststellungsdatum missing"
 
-  - code: "Klinischer Status observed"
-    expression: "Klinischer Status observed"
-  - code: "Klinischer Status non-matching"
-    expression: "Klinischer Status non-matching"
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values Condition.id"
+    expression: "Missing values Condition.id"
+
+  - code: "Missing values Condition.meta"
+    expression: "Missing values Condition.meta"
+
+  - code: "Missing values Primaerdiagnose"
+    expression: "Missing values Primaerdiagnose"
+
+  - code: "Missing values Feststellungsdatum"
+    expression: "Missing values Feststellungsdatum"
+
+  - code: "Missing values Feststellungsdatum"
+    expression: "Missing values Feststellungsdatum"
+
+  - code: "Missing values Feststellungsdatum"
+    expression: "Missing values Feststellungsdatum"
+
+  - code: "Missing values ICD10"
+    expression: "Missing values ICD10"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+  - code: "Missing values encounter"
+    expression: "Missing values encounter"
+
+  - code: "Missing values recordedDate"
+    expression: "Missing values recordedDate"
+
+  - code: "Missing values Klinischer Zeitraum"
+    expression: "Missing values Klinischer Zeitraum"
+
+  - code: "Missing values clinicalStatus"
+    expression: "Missing values clinicalStatus"
+
+  - code: "Missing values Verifizierungsstatus"
+    expression: "Missing values Verifizierungsstatus"
+
+  - code: "Missing values Diagnosesicherheit"
+    expression: "Missing values Diagnosesicherheit"
+
+  - code: "Missing values Seitenlokalisation"
+    expression: "Missing values Seitenlokalisation"
+
+  - code: "Missing values icd-10-gm-mehrfachcodierungs-kennzeichen"
+    expression: "Missing values icd-10-gm-mehrfachcodierungs-kennzeichen"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+#  - code: "icd-10-gm observed"
+#    expression: "icd-10-gm observed"
+
+#  - code: "Inadmissible categorical values icd-10-gm"
+#    expression: "Inadmissible categorical values icd-10-gm"
+
 
   - code: "Verifizierungsstatus observed"
     expression: "Verifizierungsstatus observed"
-  - code: "Verifizierungsstatus non-matching"
-    expression: "Verifizierungsstatus non-matching"
 
-  - code: "Diagnose observed"
-    expression: "Diagnose observed"
-  - code: "Diagnose SNOMED CT non-matching"
-    expression: "Diagnose SNOMED CT non-matching"
-  - code: "Diagnose Orphanet non-matching"
-    expression: "Diagnose Orphanet non-matching"
+  - code: "Inadmissible categorical values Verifizierungsstatus"
+    expression: "Inadmissible categorical values Verifizierungsstatus"
+
+
+
+  - code: "Klinischer Status observed"
+    expression: "Klinischer Status observed"
+
+  - code: "Inadmissible categorical values Klinischer Status"
+    expression: "Inadmissible categorical values Klinischer Status"
+
+
 
   - code: "Diagnosesicherheit observed"
     expression: "Diagnosesicherheit observed"
-  - code: "Diagnosesicherheit non-matching"
-    expression: "Diagnosesicherheit non-matching"
+
+  - code: "Inadmissible categorical values Diagnosesicherheit"
+    expression: "Inadmissible categorical values Diagnosesicherheit"
+
 
   - code: "Seitenlokalisation observed"
     expression: "Seitenlokalisation observed"
-  - code: "Seitenlokalisation non-matching"
-    expression: "Seitenlokalisation non-matching"
+
+  - code: "Inadmissible categorical values Seitenlokalisation"
+    expression: "Inadmissible categorical values Seitenlokalisation"
 
   - code: "Mehrfachkodierungs-Kennzeichen observed"
     expression: "Mehrfachkodierungs-Kennzeichen observed"
-  - code: "Mehrfachkodierungs-Kennzeichen non-matching"
-    expression: "Mehrfachkodierungs-Kennzeichen non-matching"
 
-  - code: "Körperstelle observed"
-    expression: "Körperstelle observed"
-  - code: "Körperstelle non-matching"
-    expression: "Körperstelle non-matching"
+  - code: "Inadmissible categorical values Mehrfachkodierungs-Kennzeichen"
+    expression: "Inadmissible categorical values Mehrfachkodierungs-Kennzeichen"
 
-  - code: "Patient missing"
-    expression: "Patient missing"
 
-  - code: "Encounter missing"
-    expression: "Encounter missing"
-
-  - code: "Klinischer Zeitraum missing"
-    expression: "Klinischer Zeitraum missing"
+#Contradictions
+##DQI: Logical Contradictions
 
   - code: "Klinischer Zeitraum type"
     expression: "Klinischer Zeitraum type"
@@ -63,8 +113,3 @@ group:
   - code: "Klinischer Zeitraum Ende ist vor klinischer Zeitraum Start"
     expression: "Klinischer Zeitraum Ende ist vor klinischer Zeitraum Start"
 
-  - code: "Dokumentationsdatum missing"
-    expression: "Dokumentationsdatum missing"
-
-  - code: "Anzahl Hinweise"
-    expression: "Anzahl Hinweise"

@@ -1,42 +1,174 @@
-library: scripts/encounter.cql
-group:
+library: Z:/Projekte/08_DIZ_intern/DIZ/FHIR-DQA-App/code/src/DQA-CQL/encounter.cql
+group: 
 - type: Encounter
-  code: "Fall Kontakt mit einer Gesundheitseinrichtung"
+  code: Encounter
   population:
   - expression: InInitialPopulation
   stratifier:
-  - code: "Aufnahmegrund ErsteUndZweiteStelle observed"
-    expression: "Aufnahmegrund ErsteUndZweiteStelle observed"
 
-  - code: "Aufnahmegrund DritteStelle observed"
-    expression: "Aufnahmegrund DritteStelle observed"
+#Completeness 
+## DQI: Missing values
 
-  - code: "Aufnahmegrund VierteStelle observed"
-    expression: "Aufnahmegrund VierteStelle observed"
+  - code: "Missing values Encounter.id"
+    expression: "Missing values Encounter.id"
 
-  - code: "Aufnahmenummer missing"
-    expression: "Aufnahmenummer missing"
+  - code: "Missing values Encounter.meta.profile"
+    expression: "Missing values Encounter.meta.profile"
 
-  - code: "Aufnahmenummer System observed"
-    expression: "Aufnahmenummer System observed"
+  - code: "Missing values Encounter.Aufnahmegrund.ErsteUndZweiteStelle.code"
+    expression: "Missing values Encounter.Aufnahmegrund.ErsteUndZweiteStelle.code"
 
-  - code: "Status observed"
-    expression: "Status observed"
-  - code: "Status non-matching"
-    expression: "Status non-matching"
+  - code: "Missing values Encounter.Aufnahmegrund.ErsteUndZweiteStelle.display"
+    expression: "Missing values Encounter.Aufnahmegrund.ErsteUndZweiteStelle.display"
+    
+  - code: "Missing values Encounter.Aufnahmegrund.DritteStelle.code"
+    expression: "Missing values Encounter.Aufnahmegrund.DritteStelle.code"
+
+  - code: "Missing values Encounter.Aufnahmegrund.DritteStelle.display"
+    expression: "Missing values Encounter.Aufnahmegrund.DritteStelle.display"
+    
+  - code: "Missing values Encounter.Aufnahmegrund.VierteStelle.code"
+    expression: "Missing values Encounter.Aufnahmegrund.VierteStelle.code"
+  
+  - code: "Missing values Encounter.Aufnahmegrund.VierteStelle.display"
+    expression: "Missing values Encounter.Aufnahmegrund.VierteStelle.display"
+  
+  - code: "Missing values Aufnahmenummer"
+    expression: "Missing values Aufnahmenummer"
+
+  - code: "Missing values Encounter.status"
+    expression: "Missing values Encounter.status"
+  
+  - code: "Missing values Encounter.class.code"
+    expression: "Missing values Encounter.class.code"
+
+  - code: "Missing values Encounter.class.display"
+    expression: "Missing values Encounter.class.display"
+
+  - code: "Missing values Kontaktebene.code"
+    expression: "Missing values Kontaktebene.code"
+
+  - code: "Missing values Kontaktebene.display"
+    expression: "Missing values Kontaktebene.display"
+
+### Fachabteilung
+  - code: "Missing values Fachabteilung.code"
+    expression: "Missing values Fachabteilung.code"
+
+  - code: "Missing values Fachabteilung.display"
+    expression: "Missing values Fachabteilung.display"
+
+### Subject
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+### Period
+  - code: "Missing values period.start"
+    expression: "Missing values period.start"
+
+  - code: "Missing values period.end"
+    expression: "Missing values period.end"
+
+### Hospitalization
+  - code: "Missing values Aufnahmeanlass"
+    expression: "Missing values Aufnahmeanlass"
+
+  - code: "Missing values Entlassgrund"
+    expression: "Missing values Entlassgrund"
+
+### diagnosis
+  - code: "Missing values diagnosis.condition"
+    expression: "Missing values diagnosis.condition"
+
+  - code: "Missing values Diagnosetyp.code"
+    expression: "Missing values Diagnosetyp.code"
+
+  - code: "Missing values Diagnosetyp.display"
+    expression: "Missing values Diagnosetyp.display"
+
+  - code: "Missing values Diagnosesubtyp.code"
+    expression: "Missing values Diagnosesubtyp.code"
+
+  - code: "Missing values Diagnosesubtyp.display"
+    expression: "Missing values Diagnosesubtyp.display"
+
+  - code: "Missing values partOf"
+    expression: "Missing values partOf"
+
+# Consistency
+## DQI: Inadmissible categorical values
+
+  - code: Inadmissible categorical values Encounter.Aufnahmegrund.ErsteUndZweiteStelle"
+    expression: "Inadmissible categorical values Encounter.Aufnahmegrund.ErsteUndZweiteStelle"
+
+### Status
+
+  - code: "Inadmissible categorical values Encounter.status"
+    expression: "Inadmissible categorical values Encounter.status"
+
+### Kontaktklasse
+  - code: "Inadmissible categorical values Encounter.class"
+    expression: "Inadmissible categorical values Encounter.class"
 
   - code: "Kontaktklasse observed"
     expression: "Kontaktklasse observed"
-  - code: "Kontaktklasse non-matching"
-    expression: "Kontaktklasse non-matching"
 
+### Kontaktebene
   - code: "Kontaktebene observed"
     expression: "Kontaktebene observed"
-  - code: "Kontaktebene non-matching"
-    expression: "Kontaktebene non-matching"
 
-  - code: "Patient missing"
-    expression: "Patient missing"
+  - code: "Inadmissible categorical values Kontaktebene"
+    expression: "Inadmissible categorical values Kontaktebene"
 
-  - code: "Parent Encounter missing"
-    expression: "Parent Encounter missing"
+### Kontaktart
+  - code: "Kontaktart observed"
+    expression: "Kontaktart observed"
+
+  - code: "Inadmissible categorical values Kontaktart"
+    expression: "Inadmissible categorical values Kontaktart"
+
+### Fachabteilung
+
+  - code: "Fachabteilung observed"
+    expression: "Fachabteilung observed"
+
+  - code: "Inadmissible categorical values Fachabteilung"
+    expression: "Inadmissible categorical values Fachabteilung"
+
+### Fachabteilung_erweitert
+  
+  - code: "Fachabteilung_erweitert observed"
+    expression: "Fachabteilung_erweitert observed"
+
+  - code: "Inadmissible categorical values Fachabteilung_erweitert"
+    expression: "Inadmissible categorical values Fachabteilung_erweitert"
+
+
+
+### hospitalization
+  - code: "Aufnahmeanlass observed"
+    expression: "Aufnahmeanlass observed"
+
+  - code: "Inadmissible categorical values Aufnahmeanlass"
+    expression: "Inadmissible categorical values Aufnahmeanlass"
+
+  - code: "Entlassgrund ErsteUndZweiteStelle observed"
+    expression: "Entlassgrund ErsteUndZweiteStelle observed"
+
+  - code: "Inadmissible categorical values Entlassgrund ErsteUndZweiteStelle"
+    expression: "Inadmissible categorical values Entlassgrund ErsteUndZweiteStelle"
+
+  - code: "Entlassgrund DritteStelle observed"
+    expression: "Entlassgrund DritteStelle observed"
+
+  - code: "Inadmissible categorical values Entlassgrund DritteStelle"
+    expression: "Inadmissible categorical values Entlassgrund DritteStelle"
+
+
+# Contradictions
+## DQI: Logical Contradictions
+  - code: "Contradiction"
+    expression: "Contradiction"
+
+  - code: "Entlassdatum vor Aufnahmedatum"
+    expression: "Entlassdatum vor Aufnahmedatum"

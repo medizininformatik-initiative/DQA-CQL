@@ -1,0 +1,84 @@
+library: Z:/Projekte/08_DIZ_intern/DIZ/FHIR-DQA-App/code/src/DQA-CQL/DiagnosticReportPatho.cql
+group: 
+- type: DiagnosticReport
+  code: DiagnosticReport
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values DiagnosticReport.id"
+    expression: "Missing values DiagnosticReport.id"
+
+  - code: "Missing values meta"
+    expression: "Missing values meta"
+
+  - code: "Missing values identifierType"
+    expression: "Missing values identifierType"
+
+  - code: "Missing values identifierValue"
+    expression: "Missing values identifierValue"
+
+  - code: "Missing values ServiceRequest"
+    expression: "Missing values ServiceRequest"
+
+  - code: "Missing values Status"
+    expression: "Missing values Status"
+
+  - code: "Missing values Pathology report code"
+    expression: "Missing values Pathology report code"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+  - code: "Missing values encounter"
+    expression: "Missing values encounter"
+
+  - code: "Effective type"
+    expression: "Effective type"
+
+  - code: "Missing values Dokumentationsdatum"
+    expression: "Missing values Dokumentationsdatum"
+
+  - code: "Missing values performer"
+    expression: "Missing values performer"
+
+  - code: "Missing values specimen"
+    expression: "Missing values specimen"
+
+  - code: "Missing values result"
+    expression: "Missing values result"
+
+  - code: "Missing values Schlussfolgerungscode"
+    expression: "Missing values Schlussfolgerungscode"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+  - code: "identifierType observed"
+    expression: "identifierType observed"
+
+  - code: "Inadmissible categorical values identifierType"
+    expression: "Inadmissible categorical values identifierType"
+
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+
+  - code: "Pathology report code observed"
+    expression: "Pathology report code observed"
+
+  - code: "Inadmissible categorical values Pathology report code"
+    expression: "Inadmissible categorical values Pathology report code"
+
+
+  - code: "Schlussfolgerungscode observed"
+    expression: "Schlussfolgerungscode observed"
+
+  - code: "Inadmissible categorical values Schlussfolgerungscode"
+    expression: "Inadmissible categorical values Schlussfolgerungscode"

@@ -1,0 +1,61 @@
+library: Z:/Projekte/08_DIZ_intern/DIZ/FHIR-DQA-App/code/src/DQA-CQL/MedicationStatement.cql
+group: 
+- type: MedicationStatement
+  code: MedicationStatement
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values MedicationStatement.id"
+    expression: "Missing values MedicationStatement.id"
+  
+  - code: "Missing values MedicationStatement.meta"
+    expression: "Missing values MedicationStatement.meta"
+
+  - code: "Missing values MedicationStatement.basedOn"
+    expression: "Missing values MedicationStatement.basedOn"
+
+  - code: "Missing values MedicationStatement.status"
+    expression: "Missing values MedicationStatement.status"
+
+  - code: "Missing values medicationReference"
+    expression: "Missing values medicationReference"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+  - code: "Missing values context"
+    expression: "Missing values context"
+
+  - code: "Missing values dosage.route"
+    expression: "Missing values dosage.route"
+
+
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+  - code: "Weg der Anwendung observed"
+    expression: "Weg der Anwendung observed"
+
+  - code: "Inadmissible categorical values dosage.route"
+    expression: "Inadmissible categorical values dosage.route"
+
+
+#Contradictions
+##DQI: Logical Contradictions
+
+  - code: "Einnahmedauer type"
+    expression: "Einnahmedauer type"
+
+  - code: "Einnahmedauer Ende ist vor Einnahmedauer Start"
+    expression: "Einnahmedauer Ende ist vor Einnahmedauer Start"

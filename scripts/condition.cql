@@ -1,11 +1,10 @@
 library "condition"
-using FHIR version '4.0.0'
-include FHIRHelpers version '4.0.0'
+using FHIR version '4.0.1'
+include FHIRHelpers version '4.0.1'
 
+valueset ICD10: 'http://fhir.de/CodeSystem/bfarm/icd-10-gm' //	http://fhir.de/ValueSet/bfarm/icd-10-gm OR 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm'
+valueset Verifizierungsstatus: 'http://hl7.org/fhir/ValueSet/condition-ver-status'
 valueset "Klinischer Status": 'http://hl7.org/fhir/ValueSet/condition-clinical'
-valueset "Verifizierungsstatus": 'http://hl7.org/fhir/ValueSet/condition-ver-status'
-valueset "Diagnose SNOMED CT": 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/diagnoses-sct'
-valueset "Diagnose Orphanet": 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-orphanet'
 valueset Diagnosesicherheit: 'https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ICD_DIAGNOSESICHERHEIT'
 valueset Seitenlokalisation: 'https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ICD_SEITENLOKALISATION'
 valueset "Mehrfachkodierungs-Kennzeichen": 'http://fhir.de/ValueSet/icd-10-gm-mehrfachcodierungs-kennzeichen'
@@ -14,9 +13,10 @@ valueset "Körperstelle": 'http://hl7.org/fhir/ValueSet/body-site'
 context Patient
 
 define InInitialPopulation:
-  from [Condition] C
-    where exists C.meta.profile.where(StartsWith($this, 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/StructureDefinition/Diagnose'))
+  [Condition]
 
+
+// Helper Functions
 define function ToCodeableConcept(codings List<Coding>):
   if exists codings then
     CodeableConcept {
@@ -25,83 +25,144 @@ define function ToCodeableConcept(codings List<Coding>):
   else
     null
 
+//NonMatching prüft momentan nur Codes und kein display  
 define function NonMatching(concept CodeableConcept, valueset System.ValueSet):
   if FHIRHelpers.ToConcept(concept) in valueset then
     null
   else
     concept
+ 
 
-// Referenz Primaerdiagnose
-define function "Referenz Primaerdiagnose missing"(condition Condition):
-  not exists condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-related').value
+/* 
+Completeness
+DQI: Missing values
+*/
 
+define function "Missing values Condition.id" (condition Condition): 
+  condition.id is not null
+
+define function "Missing values Condition.meta" (condition Condition): 
+  condition.meta is not null
+
+  // Referenz Primaerdiagnose
+define function "Missing values Primaerdiagnose"(condition Condition):
+  exists(
+    condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-related').value
+  )
+  
 // Feststellungsdatum
-define function "Feststellungsdatum missing"(condition Condition):
-  not exists condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate').value
+define function "Missing values Feststellungsdatum"(condition Condition):
+  exists(
+    condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate').value
+  )
 
-// Klinischer Status
-define function "Klinischer Status observed"(condition Condition):
-  condition.clinicalStatus
+define function "Missing values ICD10"(condition Condition):
+  exists(
+    condition.code.coding.where(system = 'http://fhir.de/CodeSystem/bfarm/icd-10-gm')
+  )
 
-define function "Klinischer Status non-matching"(condition Condition):
-  NonMatching(condition.clinicalStatus, "Klinischer Status")
+define function "Missing values subject"(condition Condition):
+  exists(
+    condition.subject.reference
+  )
+
+define function "Missing values encounter"(condition Condition):
+  exists(
+    condition.encounter.reference
+  )
+
+
+define function "Missing values recordedDate"(condition Condition):
+  exists(
+    condition.recordedDate
+  )
+
+
+define function "Missing values Klinischer Zeitraum"(condition Condition):
+  condition.onset is not null
+
+define function "Missing values clinicalStatus"(condition Condition):
+  exists(condition.clinicalStatus)
+
+
+define function "Missing values Verifizierungsstatus"(condition Condition):
+  exists(condition.verificationStatus)
+
+define function "Missing values Diagnosesicherheit"(condition Condition):
+  exists(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').value)
+
+define function "Missing values Seitenlokalisation"(condition Condition):
+  exists(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/seitenlokalisation').value)
+
+
+define function "Missing values icd-10-gm-mehrfachcodierungs-kennzeichen"(condition Condition):
+  exists(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen').value)
+
+
+/* 
+Consistency 
+DQI: Inadmissble categorical values
+*/
+
+//ICD10
+
+/*   
+define function "icd-10-gm observed"(condition Condition):
+  if condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm') is null then
+    null
+  else
+    ToCodeableConcept({condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm')})
+
+define function "Inadmissible categorical values icd-10-gm"(condition Condition):
+  NonMatching("icd-10-gm observed"(condition), ICD10)
+
+*/
+
 
 // Verifizierungsstatus
 define function "Verifizierungsstatus observed"(condition Condition):
   condition.verificationStatus
 
-define function "Verifizierungsstatus non-matching"(condition Condition):
+
+define function "Inadmissible categorical values Verifizierungsstatus"(condition Condition):
   NonMatching(condition.verificationStatus, "Verifizierungsstatus")
 
-// Diagnose
-define function "Diagnose observed"(condition Condition):
-  condition.code
+// Klinischer Status
+define function "Klinischer Status observed"(condition Condition):
+  condition.clinicalStatus
 
-define function "Diagnose SNOMED CT non-matching"(condition Condition):
-  NonMatching(ToCodeableConcept(condition.code.coding.where(system = 'http://snomed.info/sct')), "Diagnose SNOMED CT")
-
-define function "Diagnose Orphanet non-matching"(condition Condition):
-  NonMatching(ToCodeableConcept(condition.code.coding.where(system = 'http://www.orpha.net')), "Diagnose Orphanet")
+define function "Inadmissible categorical values Klinischer Status"(condition Condition):
+  NonMatching(condition.clinicalStatus, "Klinischer Status")
 
 // Diagnosesicherheit
 define function "Diagnosesicherheit observed"(condition Condition):
   ToCodeableConcept(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').value)
 
-define function "Diagnosesicherheit non-matching"(condition Condition):
+define function "Inadmissible categorical values Diagnosesicherheit"(condition Condition):
   NonMatching("Diagnosesicherheit observed"(condition), Diagnosesicherheit)
+
 
 // Seitenlokalisation
 define function "Seitenlokalisation observed"(condition Condition):
   ToCodeableConcept(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/seitenlokalisation').value)
 
-define function "Seitenlokalisation non-matching"(condition Condition):
+define function "Inadmissible categorical values Seitenlokalisation"(condition Condition):
   NonMatching("Seitenlokalisation observed"(condition), Seitenlokalisation)
 
 // Mehrfachkodierungs-Kennzeichen
 define function "Mehrfachkodierungs-Kennzeichen observed"(condition Condition):
   ToCodeableConcept(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen').value)
 
-define function "Mehrfachkodierungs-Kennzeichen non-matching"(condition Condition):
+define function "Inadmissible categorical values Mehrfachkodierungs-Kennzeichen"(condition Condition):
   NonMatching("Mehrfachkodierungs-Kennzeichen observed"(condition), "Mehrfachkodierungs-Kennzeichen")
 
-// Körperstelle
-define function "Körperstelle observed"(condition Condition):
-  condition.bodySite.first()
 
-define function "Körperstelle non-matching"(condition Condition):
-  NonMatching(condition.bodySite.first(), "Körperstelle")
-
-// Patient
-define function "Patient missing"(condition Condition):
-  condition.subject.reference is null
-
-// Encounter
-define function "Encounter missing"(condition Condition):
-  condition.encounter.reference is null
+/* 
+Contradictions
+DQI: Logical Contradictions
+*/
 
 // Klinischer Zeitraum
-define function "Klinischer Zeitraum missing"(condition Condition):
-  condition.onset is null
 
 define function "Klinischer Zeitraum type"(condition Condition):
   case
@@ -114,10 +175,4 @@ define function "Klinischer Zeitraum type"(condition Condition):
 define function "Klinischer Zeitraum Ende ist vor klinischer Zeitraum Start"(condition Condition):
   condition.onset.start > condition.onset.end
 
-// Dokumentationsdatum
-define function "Dokumentationsdatum missing"(condition Condition):
-  condition.recordedDate is null
 
-// Hinweis
-define function "Anzahl Hinweise"(condition Condition):
-  Length(condition.note)
