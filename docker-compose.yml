@@ -1,6 +1,6 @@
 services:
   data-server:
-    image: "samply/blaze:1.5.1@sha256:0005ff60713382264d3ffaa4a800b6f41e6cf928ccc58ed8c7fb72569f01a366"
+    image: "samply/blaze:1.6.0@sha256:76b8d0947a8463921e4cd5db291b14d58c221d4ca474a582eea3f16294ef8b3d"
     environment:
       JAVA_TOOL_OPTIONS: "-Xmx4g"
       EXTERN_TERMINOLOGY_SERVICE_URL: "http://terminology-server:8080/fhir"
@@ -19,7 +19,7 @@ services:
   # Please uncomment the SNOMED CT lines if you have the release files.
   # Otherwise all SNOMED CT concepts will be flagged as non-matching.
   terminology-server:
-    image: "samply/blaze:1.5.1@sha256:0005ff60713382264d3ffaa4a800b6f41e6cf928ccc58ed8c7fb72569f01a366"
+    image: "samply/blaze:1.6.0@sha256:76b8d0947a8463921e4cd5db291b14d58c221d4ca474a582eea3f16294ef8b3d"
     environment:
       JAVA_TOOL_OPTIONS: "-Xmx4g"
       ENABLE_TERMINOLOGY_SERVICE: "true"

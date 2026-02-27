@@ -1,0 +1,61 @@
+library: scripts/Procedure.cql
+group: 
+- type: Procedure
+  code: Procedure
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values Procedure.id"
+    expression: "Missing values Procedure.id"
+
+  - code: "Missing values Procedure.meta"
+    expression: "Missing values Procedure.meta"
+
+#  - code: "Missing values Dokumentationsdatum"
+#    expression: "Missing values Dokumentationsdatum"
+
+#  - code: "Missing values Durchfuehrungsabsicht"
+#    expression: "Missing values Durchfuehrungsabsicht"
+
+  - code: "Missing values status"
+    expression: "Missing values status"
+
+  - code: "Missing values SNOMED.code"
+    expression: "Missing values SNOMED.code"
+
+  - code: "Missing values SNOMED.display"
+    expression: "Missing values SNOMED.display"
+
+  - code: "Missing values OPS.code"
+    expression: "Missing values OPS.code"
+
+  - code: "Missing values OPS.display"
+    expression: "Missing values OPS.display"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+  - code: "Missing values encounter"
+    expression: "Missing values encounter"
+
+  - code: "Missing values Durchfuehrungsdatum"
+    expression: "Missing values Durchfuehrungsdatum"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+  - code: "procedure_category_sct observed"
+    expression: "procedure_category_sct observed"
+
+  - code: "Inadmissible categorical values procedure_category_sct"
+    expression: "Inadmissible categorical values procedure_category_sct"
+
+  - code: "OPS observed"
+    expression: "OPS observed"
+
+#  - code: "Inadmissible categorical values OPS"
+#    expression: "Inadmissible categorical values OPS"

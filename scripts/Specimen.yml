@@ -1,0 +1,96 @@
+library: scripts/Specimen.cql
+group: 
+- type: Specimen
+  code: Specimen
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+  - code: "Missing values Specimen ID"
+    expression: "Missing values Specimen ID"
+
+  - code: "Missing values Specimen meta"
+    expression: "Missing values Specimen meta"
+
+  - code: "Missing values Specimen Text"
+    expression: "Missing values Specimen Text"
+
+  - code: "Missing values identifier Filler-ID"
+    expression: "Missing values identifier Filler-ID"
+
+  - code: "Missing values identifier Placer-ID"
+    expression: "Missing values identifier Placer-ID"
+
+  - code: "Missing values Labor-ID"
+    expression: "Missing values Labor-ID"
+
+  - code: "Missing values Status"
+    expression: "Missing values Status"
+
+  - code: "Missing values Materialart"
+    expression: "Missing values Materialart"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+  - code: "Missing values Collection time"
+    expression: "Missing values Collection time"
+
+  - code: "Missing values quantity"
+    expression: "Missing values quantity"
+
+  - code: "Missing values Entnahmemethode"
+    expression: "Missing values Entnahmemethode"
+
+  - code: "Missing values Processing"
+    expression: "Missing values Processing"
+
+  - code: "Missing values Probenbehälter"
+    expression: "Missing values Probenbehälter"
+
+  - code: "Missing values Container volume or size"
+    expression: "Missing values Container volume or size"
+
+  - code: "Missing values Quantity of specimen within container"
+    expression: "Missing values Quantity of specimen within container"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+### identifier Filler-ID
+  - code: "identifier Filler-ID observed"
+    expression: "identifier Filler-ID observed"
+
+  - code: "Inadmissible categorical values identifier Filler-ID"
+    expression: "Inadmissible categorical values identifier Filler-ID"
+
+### Status
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+### type (Kind of material that forms the specimen)
+
+  - code: "Materialart observed"
+    expression: "Materialart observed"
+
+  - code: "Inadmissible categorical values Materialart"
+    expression: "Inadmissible categorical values Materialart"
+
+### Entnahmemethode
+
+  - code: "Entnahmemethode observed"
+    expression: "Entnahmemethode observed"
+
+  - code: "Inadmissible categorical values Entnahmemethode"
+    expression: "Inadmissible categorical values Entnahmemethode"
+
+### Probenbehälter
+
+  - code: "Probenbehälter observed"
+    expression: "Probenbehälter observed"
+
+  - code: "Inadmissible categorical values Probenbehälter"
+    expression: "Inadmissible categorical values Probenbehälter"

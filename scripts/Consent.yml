@@ -1,0 +1,68 @@
+library: scripts/Consent.cql
+group: 
+- type: Consent
+  code: Consent
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values Consent.id"
+    expression: "Missing values Consent.id"
+
+  - code: "Missing values Consent.meta"
+    expression: "Missing values Consent.meta"
+
+  - code: "Missing values Consent.status"
+    expression: "Missing values Consent.status"
+
+  - code: "Missing values consent-category Loinc"
+    expression: "Missing values consent-category Loinc"
+
+  - code: "Missing values MII consent-category"
+    expression: "Missing values MII consent-category"
+
+  - code: "Missing values Patient"
+    expression: "Missing values Patient"
+
+  - code: "Missing values Erstellungszeitpunkt"
+    expression: "Missing values Erstellungszeitpunkt"
+
+  - code: "Missing values policy"
+    expression: "Missing values policy"
+
+  - code: "Missing values Beginn der Gültigkeit der Consent-Policy"
+    expression: "Missing values Beginn der Gültigkeit der Consent-Policy"
+
+  - code: "Missing values Ende der Gültigkeit der Consent-Policy"
+    expression: "Missing values Ende der Gültigkeit der Consent-Policy"
+
+  - code: "Missing values provision type"
+    expression: "Missing values provision type"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+  - code: "consent-category Loinc observed"
+    expression: "consent-category Loinc observed"
+
+  - code: "Inadmissible categorical values consent-category Loinc"
+    expression: "Inadmissible categorical values consent-category Loinc"
+
+ # - code: "MII consent-category observed"
+ #   expression: "MII consent-category observed"
+
+#  - code: "Provision Type observed"
+#    expression: "Provision Type observed"
+
+#  - code: "Inadmissible categorical values Provision Type"
+#    expression: "Inadmissible categorical values Provision Type"
+
+#Contradictions
+##DQI: Logical Contradictions
+
+  - code: "Consent-Policy - Ende der Gültigkeit vor Beginn der Gültigkeit"
+    expression: "Consent-Policy - Ende der Gültigkeit vor Beginn der Gültigkeit"

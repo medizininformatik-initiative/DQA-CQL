@@ -49,8 +49,7 @@ The scripts were developed with help of available KDS text data from [kerndatens
 After the example deployment is set up and the test data is imported, the scripts can be executed the following way:
 
 ```sh
-blazectl --server http://localhost:8080/fhir evaluate-measure scripts/condition.yml | blazectl render-report > reports/condition.html
-blazectl --server http://localhost:8080/fhir evaluate-measure scripts/encounter.yml | blazectl render-report > reports/encounter.html
+./generate-reports.sh
 ```
 
 A [Script Guide](docs/script-guide.md), explaining how the scripts are build, is available.

@@ -1,0 +1,85 @@
+library: scripts/DiagnosticReportLab.cql
+group: 
+- type: DiagnosticReport
+  code: DiagnosticReport
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values DiagnosticReport.id"
+    expression: "Missing values DiagnosticReport.id"
+
+  - code: "Missing values meta"
+    expression: "Missing values meta"
+
+  - code: "Missing values identifierType"
+    expression: "Missing values identifierType"
+
+  - code: "Missing values identifierValue"
+    expression: "Missing values identifierValue"
+
+  - code: "Missing values basedOn"
+    expression: "Missing values basedOn"
+
+  - code: "Missing values LOINC"
+    expression: "Missing values LOINC"
+
+  - code: "Missing values ServiceSectionID"
+    expression: "Missing values ServiceSectionID"
+
+  - code: "Missing values LOINC.Befund"
+    expression: "Missing values LOINC.Befund"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+  - code: "Missing values encounter"
+    expression: "Missing values encounter"
+
+  - code: "Missing values observation"
+    expression: "Missing values observation"
+
+  - code: "Effective type"
+    expression: "Effective type"
+
+  - code: "Missing values effective"
+    expression: "Missing values effective"
+
+  - code: "Missing values Dokumentationsdatum"
+    expression: "Missing values Dokumentationsdatum"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+  - code: "identifierType observed"
+    expression: "identifierType observed"
+
+  - code: "Inadmissible categorical values identifierType"
+    expression: "Inadmissible categorical values identifierType"
+
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+  - code: "LOINC observed"
+    expression: "LOINC observed"
+
+  - code: "Inadmissible categorical values LOINC"
+    expression: "Inadmissible categorical values LOINC"
+
+  - code: "ServiceSectionID observed"
+    expression: "ServiceSectionID observed"
+
+  - code: "Inadmissible categorical values ServiceSectionID"
+    expression: "Inadmissible categorical values ServiceSectionID"
+
+  - code: "LOINC.Befund observed"
+    expression: "LOINC.Befund observed"
+
+  - code: "Inadmissible categorical values LOINC.Befund"
+    expression: "Inadmissible categorical values LOINC.Befund"

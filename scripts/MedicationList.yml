@@ -1,0 +1,67 @@
+library: scripts/MedicationList.cql
+group: 
+- type: List
+  code: List
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values List.id"
+    expression: "Missing values List.id"
+
+  - code: "Missing values List.meta"
+    expression: "Missing values List.meta"
+
+  - code: "Missing values List.status"
+    expression: "Missing values List.status"
+
+  - code: "Missing values List.mode"
+    expression: "Missing values List.mode"
+  
+  - code: "Missing values List.title"
+    expression: "Missing values List.title"
+
+  - code: "Missing values Medikationslistencode"
+    expression: "Missing values Medikationslistencode"
+
+  - code: "Missing values Fallkontext"
+    expression: "Missing values Fallkontext"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+  - code: "Missing values encounter"
+    expression: "Missing values encounter"
+
+  - code: "Missing values entry"
+    expression: "Missing values entry"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+  - code: "mode observed"
+    expression: "mode observed"
+
+  - code: "Inadmissible categorical values mode"
+    expression: "Inadmissible categorical values mode"
+
+  - code: "Medikationslistencode observed"
+    expression: "Medikationslistencode observed"
+
+  - code: "Inadmissible categorical values Medikationslistencode"
+    expression: "Inadmissible categorical values Medikationslistencode"
+
+  - code: "Fallkontext observed"
+    expression: "Fallkontext observed"
+
+  - code: "Inadmissible categorical values Fallkontext"
+    expression: "Inadmissible categorical values Fallkontext"

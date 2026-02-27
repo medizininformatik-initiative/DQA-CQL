@@ -1,0 +1,114 @@
+library: scripts/Condition.cql
+group: 
+- type: Condition
+  code: Condition
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values Condition.id"
+    expression: "Missing values Condition.id"
+
+  - code: "Missing values Condition.meta"
+    expression: "Missing values Condition.meta"
+
+  - code: "Missing values Primaerdiagnose"
+    expression: "Missing values Primaerdiagnose"
+
+  - code: "Missing values Feststellungsdatum"
+    expression: "Missing values Feststellungsdatum"
+
+  - code: "Missing values Feststellungsdatum"
+    expression: "Missing values Feststellungsdatum"
+
+  - code: "Missing values Feststellungsdatum"
+    expression: "Missing values Feststellungsdatum"
+
+  - code: "Missing values ICD10"
+    expression: "Missing values ICD10"
+
+  - code: "Missing values subject"
+    expression: "Missing values subject"
+
+  - code: "Missing values encounter"
+    expression: "Missing values encounter"
+
+  - code: "Missing values recordedDate"
+    expression: "Missing values recordedDate"
+
+  - code: "Missing values Klinischer Zeitraum"
+    expression: "Missing values Klinischer Zeitraum"
+
+  - code: "Missing values clinicalStatus"
+    expression: "Missing values clinicalStatus"
+
+  - code: "Missing values Verifizierungsstatus"
+    expression: "Missing values Verifizierungsstatus"
+
+  - code: "Missing values Diagnosesicherheit"
+    expression: "Missing values Diagnosesicherheit"
+
+  - code: "Missing values Seitenlokalisation"
+    expression: "Missing values Seitenlokalisation"
+
+  - code: "Missing values icd-10-gm-mehrfachcodierungs-kennzeichen"
+    expression: "Missing values icd-10-gm-mehrfachcodierungs-kennzeichen"
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+#  - code: "icd-10-gm observed"
+#    expression: "icd-10-gm observed"
+
+#  - code: "Inadmissible categorical values icd-10-gm"
+#    expression: "Inadmissible categorical values icd-10-gm"
+
+
+  - code: "Verifizierungsstatus observed"
+    expression: "Verifizierungsstatus observed"
+
+  - code: "Inadmissible categorical values Verifizierungsstatus"
+    expression: "Inadmissible categorical values Verifizierungsstatus"
+
+
+
+  - code: "Klinischer Status observed"
+    expression: "Klinischer Status observed"
+
+  - code: "Inadmissible categorical values Klinischer Status"
+    expression: "Inadmissible categorical values Klinischer Status"
+
+
+
+  - code: "Diagnosesicherheit observed"
+    expression: "Diagnosesicherheit observed"
+
+  - code: "Inadmissible categorical values Diagnosesicherheit"
+    expression: "Inadmissible categorical values Diagnosesicherheit"
+
+
+  - code: "Seitenlokalisation observed"
+    expression: "Seitenlokalisation observed"
+
+  - code: "Inadmissible categorical values Seitenlokalisation"
+    expression: "Inadmissible categorical values Seitenlokalisation"
+
+  - code: "Mehrfachkodierungs-Kennzeichen observed"
+    expression: "Mehrfachkodierungs-Kennzeichen observed"
+
+  - code: "Inadmissible categorical values Mehrfachkodierungs-Kennzeichen"
+    expression: "Inadmissible categorical values Mehrfachkodierungs-Kennzeichen"
+
+
+#Contradictions
+##DQI: Logical Contradictions
+
+  - code: "Klinischer Zeitraum type"
+    expression: "Klinischer Zeitraum type"
+
+  - code: "Klinischer Zeitraum Ende ist vor klinischer Zeitraum Start"
+    expression: "Klinischer Zeitraum Ende ist vor klinischer Zeitraum Start"

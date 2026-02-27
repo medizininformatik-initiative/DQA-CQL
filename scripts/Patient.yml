@@ -1,0 +1,45 @@
+library: scripts/Patient.cql
+group: 
+- type: Patient
+  code: Patient
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+  # Completeness
+  - code: "Missing values: Patient.id"
+    expression: "Missing values: Patient.id"
+  
+  - code: "Missing values: Patient.meta"
+    expression: "Missing values: Patient.meta"
+
+  - code: "Missing values: Patient.meta.profile"
+    expression: "Missing values: Patient.meta.profile"
+
+  - code: "Missing values: Patient.identifier:PseudonymisierterIdentifier"
+    expression: "Missing values: Patient.identifier:PseudonymisierterIdentifier"
+
+  - code: "Missing values: Patient.gender"
+    expression: "Missing values: Patient.gender"
+
+  - code: "Missing values: Patient.birthDate"
+    expression: "Missing values: Patient.birthDate"
+
+  - code: "Missing values: Patient.address.country"
+    expression: "Missing values: Patient.address.country"
+
+  - code: "Missing values: Patient.address.postalCode"
+    expression: "Missing values: Patient.address.postalCode"
+
+# Consistency
+  - code: "Inadmissible categorical values: Patient.gender"
+    expression: "Inadmissible categorical values: Patient.gender"
+
+#  - code: "Inadmissible categorical values: Patient.address.country"
+#    expression: "Inadmissible categorical values: Patient.address.country"
+
+#  - code: "Inadmissible categorical values: Patient.identifier"
+#    expression: "Inadmissible categorical values: Patient.identifier"
+
+#  - code: "Inadmissible categorical values: Patient.ObservationValue"
+#    expression: "Inadmissible categorical values: Patient.ObservationValue"
