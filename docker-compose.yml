@@ -24,14 +24,11 @@ services:
       JAVA_TOOL_OPTIONS: "-Xmx4g"
       ENABLE_TERMINOLOGY_SERVICE: "true"
       ENABLE_TERMINOLOGY_LOINC: "true"
-      #ENABLE_TERMINOLOGY_SNOMED_CT: "true"
-      #SNOMED_CT_RELEASE_PATH: "/app/sct-release"
       LOG_LEVEL: "debug"
     ports:
     - "8082:8080"
     volumes:
     - "blaze-terminology-data:/app/data"
-    #- "./SnomedCT_Germany-EditionRelease_PRODUCTION_20251115T120000Z:/app/sct-release"
     healthcheck:
       test: [ "CMD", "wget", "--spider", "http://localhost:8080/health" ]
       interval: 10s

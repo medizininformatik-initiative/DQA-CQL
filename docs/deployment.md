@@ -5,7 +5,17 @@ The docker compose file contains a minimal example deployment for testing purpos
 > [!CAUTION]
 > Don't use the deployment in production.
 
-The scripts use the SNOMED CT terminology, but will also work without it. Because everyone using SNOMED CT needs a license, you have to provide the release files yourself. In case you have a [SNOMED MLDS][1] account, you can download the SNOMED CT Germany Edition release packages, unzip them and edit the `docker-compose.yml` accordingly. 
+The scripts use the SNOMED CT terminology, but will also work without it (all SNOMED CT concepts will be flagged as non-matching in that case). Because everyone using SNOMED CT needs a license, you have to provide the release files yourself. In case you have a [SNOMED MLDS][1] account, you can download the SNOMED CT Germany Edition release packages and unzip them. Instead of editing `docker-compose.yml` directly, create a `docker-compose.override.yml` file with your specific paths to keep your configuration local and uncommitted:
+
+```yaml
+services:
+  terminology-server:
+    environment:
+      ENABLE_TERMINOLOGY_SNOMED_CT: "true"
+      SNOMED_CT_RELEASE_PATH: "/app/sct-release"
+    volumes:
+      - "/path/to/your/SnomedCT_Release:/app/sct-release"
+```
 
 After that, please start the Docker containers: 
 
