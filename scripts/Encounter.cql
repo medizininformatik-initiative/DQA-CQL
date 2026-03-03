@@ -215,7 +215,7 @@ define function "Kontaktebene observed"(encounter Encounter):
   if encounter.type.coding.where(system='http://fhir.de/CodeSystem/Kontaktebene') is null then
     null
   else
-    ToCodeableConcept({encounter.type.coding.where(system='http://fhir.de/CodeSystem/Kontaktebene')})
+    ToCodeableConcept(encounter.type.coding.where(system='http://fhir.de/CodeSystem/Kontaktebene'))
 
 define function "Inadmissible categorical values Kontaktebene"(encounter Encounter):
   NonMatching("Kontaktebene observed"(encounter), Kontaktebene)
@@ -225,7 +225,7 @@ define function "Kontaktart observed"(encounter Encounter):
   if encounter.type.coding.where(system='http://fhir.de/CodeSystem/kontaktart-de') is null then
     null
   else
-    ToCodeableConcept({encounter.type.coding.where(system='http://fhir.de/CodeSystem/kontaktart-de')})
+    ToCodeableConcept(encounter.type.coding.where(system='http://fhir.de/CodeSystem/kontaktart-de'))
 
 define function "Inadmissible categorical values Kontaktart"(encounter Encounter):
   NonMatching("Kontaktart observed"(encounter), Kontaktart)
@@ -235,7 +235,7 @@ define function "Fachabteilung observed"(encounter Encounter):
   if encounter.serviceType.coding.where(system='http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel') is null then
     null
   else
-    ToCodeableConcept({encounter.serviceType.coding.where(system='http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel')})
+    ToCodeableConcept(encounter.serviceType.coding.where(system='http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel'))
 
 define function "Inadmissible categorical values Fachabteilung"(encounter Encounter):
   NonMatching("Fachabteilung observed"(encounter), Fachabteilung)
@@ -245,7 +245,7 @@ define function "Fachabteilung_erweitert observed"(encounter Encounter):
   if encounter.serviceType.coding.where(system='http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert') is null then
     null
   else
-    ToCodeableConcept({encounter.serviceType.coding.where(system='http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert')})
+    ToCodeableConcept(encounter.serviceType.coding.where(system='http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert'))
 
 define function "Inadmissible categorical values Fachabteilung_erweitert"(encounter Encounter):
   NonMatching("Fachabteilung_erweitert observed"(encounter), Fachabteilung_erweitert)
@@ -257,7 +257,7 @@ define function "Aufnahmeanlass observed"(encounter Encounter):
   if encounter.hospitalization.admitSource is null then 
     null
   else 
-    ToCodeableConcept({encounter.hospitalization.admitSource.coding.where(system='http://fhir.de/CodeSystem/dgkev/Aufnahmeanlass')})
+    ToCodeableConcept(encounter.hospitalization.admitSource.coding.where(system='http://fhir.de/CodeSystem/dgkev/Aufnahmeanlass'))
 
 define function "Inadmissible categorical values Aufnahmeanlass"(encounter Encounter):
   NonMatching("Aufnahmeanlass observed"(encounter), Aufnahmeanlass)
@@ -270,7 +270,7 @@ define function "Entlassgrund ErsteUndZweiteStelle observed"(encounter Encounter
   if Entlassgrund(encounter).extension.where(url = 'ErsteUndZweiteStelle').value is null then 
     null
   else
-    ToCodeableConcept({Entlassgrund(encounter).extension.where(url = 'ErsteUndZweiteStelle').value})
+    ToCodeableConcept(Entlassgrund(encounter).extension.where(url = 'ErsteUndZweiteStelle').value)
 
 define function "Inadmissible categorical values Entlassgrund ErsteUndZweiteStelle"(encounter Encounter):
   NonMatching("Entlassgrund ErsteUndZweiteStelle observed"(encounter), Entlassungsgrund_ErsteUndZweiteStelle)
@@ -279,7 +279,7 @@ define function "Entlassgrund DritteStelle observed"(encounter Encounter):
   if Entlassgrund(encounter).extension.where(url = 'DritteStelle').value is null then
     null
   else
-    ToCodeableConcept({Entlassgrund(encounter).extension.where(url='DritteStelle').value})
+    ToCodeableConcept(Entlassgrund(encounter).extension.where(url='DritteStelle').value)
 
 define function "Inadmissible categorical values Entlassgrund DritteStelle"(encounter Encounter):
   NonMatching("Entlassgrund DritteStelle observed"(encounter), Entlassungsgrund_DritteStelle)
