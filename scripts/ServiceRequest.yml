@@ -1,0 +1,86 @@
+library: scripts/ServiceRequest.cql
+group: 
+- type: ServiceRequest
+  code: ServiceRequest
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+# Completeness
+## DQI: Missing values
+
+  - code: "Missing Values ServiceRequest id"
+    expression: "Missing Values ServiceRequest id"
+
+  - code: "Missing Values ServiceRequest meta"
+    expression: "Missing Values ServiceRequest meta"
+
+  - code: "Missing Values identifierType"
+    expression: "Missing Values identifierType"
+
+  - code: "Missing Values identifierValue"
+    expression: "Missing Values identifierValue"
+
+  - code: "Missing Values assigner"
+    expression: "Missing Values assigner"
+
+  - code: "Missing Values status"
+    expression: "Missing Values status"
+
+  - code: "Missing Values intent"
+    expression: "Missing Values intent"
+
+  - code: "Missing Values category"
+    expression: "Missing Values category"
+
+  - code: "Missing Values Laborparameter_LOINC"
+    expression: "Missing Values Laborparameter_LOINC"
+
+  - code: "Missing Values Subject"
+    expression: "Missing Values Subject"
+
+  - code: "Missing Values Encounter"
+    expression: "Missing Values Encounter"
+
+  - code: "Missing Values Anforderungsdatum"
+    expression: "Missing Values Anforderungsdatum"
+
+# Consistency 
+## DQI: Inadmissble categorical values
+
+### identifierType
+  - code: "identifierType observed"
+    expression: "identifierType observed"
+
+  - code: "Inadmissible categorical values identifierType"
+    expression: "Inadmissible categorical values identifierType"
+
+### Status
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+### Intent
+  - code: "Intent observed"
+    expression: "Intent observed"
+
+  - code: "Inadmissible categorical values Intent"
+    expression: "Inadmissible categorical values Intent"
+
+### Klassifikation als Laborauftrag
+
+  - code: "ServiceRequest category observed"
+    expression: "ServiceRequest category observed"
+
+  - code: "Inadmissible categorical values ServiceRequest category"
+    expression: "Inadmissible categorical values ServiceRequest category"
+
+### Laborparameter LOINC
+
+  - code: "Laborparameter LOINC observed"
+    expression: "Laborparameter LOINC observed"
+
+  - code: "Inadmissible categorical values Laborparameter LOINC"
+    expression: "Inadmissible categorical values Laborparameter LOINC"
