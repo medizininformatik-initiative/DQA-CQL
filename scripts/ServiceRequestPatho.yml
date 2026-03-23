@@ -1,0 +1,88 @@
+library: Z:/Projekte/08_DIZ_intern/DIZ/FHIR-DQA-App/code/src/DQA-CQL/ServiceRequestPatho.cql
+group: 
+- type: ServiceRequest
+  code: ServiceRequest
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+# Completeness
+## DQI: Missing values
+
+  - code: "Missing Values ServiceRequest id"
+    expression: "Missing Values ServiceRequest id"
+
+  - code: "Missing Values ServiceRequest meta"
+    expression: "Missing Values ServiceRequest meta"
+
+  - code: "Missing Values identifierType"
+    expression: "Missing Values identifierType"
+
+  - code: "Missing Values identifierValue"
+    expression: "Missing Values identifierValue"
+
+  - code: "Missing Values Identifikator für Auftragsgruppen"
+    expression: "Missing Values Identifikator für Auftragsgruppen"
+
+  - code: "Missing Values status"
+    expression: "Missing Values status"
+
+  - code: "Missing Values Kategorie des Untersuchungsauftrags"
+    expression: "Missing Values Kategorie des Untersuchungsauftrags"
+
+  - code: "Missing Values Code für die angeforderte Leistung"
+    expression: "Missing Values Code für die angeforderte Leistung"
+
+  - code: "Missing Values subject"
+    expression: "Missing Values subject"
+
+  - code: "Missing Values encounter"
+    expression: "Missing Values subject"
+
+  - code: "Missing Values authoredOn"
+    expression: "Missing Values authoredOn"
+
+  - code: "Missing Values requester"
+    expression: "Missing Values requester"
+
+  - code: "Missing Values specimen"
+    expression: "Missing Values specimen"
+
+# Consistency 
+## DQI: Inadmissble categorical values
+
+### identifierType
+  - code: "identifierType observed"
+    expression: "identifierType observed"
+
+#  - code: "Inadmissible categorical values identifierType"
+#    expression: "Inadmissible categorical values identifierType"
+
+### Status
+  - code: "Status observed"
+    expression: "Status observed"
+
+  - code: "Inadmissible categorical values Status"
+    expression: "Inadmissible categorical values Status"
+
+### Intent
+  - code: "Intent observed"
+    expression: "Intent observed"
+
+  - code: "Inadmissible categorical values Intent"
+    expression: "Inadmissible categorical values Intent"
+
+### Kategorie des Untersuchungsauftrags
+  - code: "Kategorie des Untersuchungsauftrags observed"
+    expression: "Kategorie des Untersuchungsauftrags observed"
+
+  - code: "Inadmissible categorical values Kategorie des Untersuchungsauftrags"
+    expression: "Inadmissible categorical values Kategorie des Untersuchungsauftrags"
+
+
+### Code für die angeforderte Leistung
+
+  - code: "Code für die angeforderte Leistung observed"
+    expression: "Code für die angeforderte Leistung observed"
+
+
