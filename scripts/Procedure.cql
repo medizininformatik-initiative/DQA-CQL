@@ -3,7 +3,7 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1'
 
 valueset procedure_category_sct: 'https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct'
-valueset OPS: 'http://fhir.de/ValueSet/bfarm/ops'
+codesystem OPS: 'http://fhir.de/CodeSystem/bfarm/ops'
 
 context Patient
 
@@ -20,12 +20,20 @@ define function ToCodeableConcept(codings List<Coding>):
     null
 
 //NonMatching prüft momentan nur Codes und kein display  
-define function NonMatching(concept CodeableConcept, valueset System.ValueSet):
+define function NonMatchingVS(concept CodeableConcept, valueset System.ValueSet):
   if FHIRHelpers.ToConcept(concept) in valueset then
     null
   else
     concept
  
+//NonMatching Codesystem
+define function NonMatchingCS(concept CodeableConcept, codesystem System.CodeSystem):
+  if concept is null then
+    null
+  else if FHIRHelpers.ToConcept(concept) in codesystem then
+    null
+  else
+    concept
 
 /* 
 Completeness
@@ -38,16 +46,9 @@ define function "Missing values Procedure.id" (procedure Procedure):
 define function "Missing values Procedure.meta" (procedure Procedure): 
   procedure.meta is not null
 
- /* 
+  
 define function "Missing values Dokumentationsdatum"(procedure Procedure):
-  procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht').valueDateTime
-*/
-
-
- /* 
-define function "Missing values Durchfuehrungsabsicht" (procedure Procedure) 
-  procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht')
-*/ 
+  procedure.extension.where(url='http://fhir.de/StructureDefinition/ProzedurDokumentationsdatum').first()
 
 
 define function "Missing values status" (procedure Procedure): 
@@ -85,17 +86,17 @@ define function "procedure_category_sct observed"(procedure Procedure):
   if procedure.category.coding.where(system='http://snomed.info/sct') is null then
     null
   else
-    ToCodeableConcept({procedure.category.coding.where(system='http://snomed.info/sct')})
+    ToCodeableConcept(procedure.category.coding.where(system='http://snomed.info/sct'))
 
 define function "Inadmissible categorical values procedure_category_sct"(procedure Procedure):
-  NonMatching("procedure_category_sct observed"(procedure), procedure_category_sct)
+  NonMatchingVS("procedure_category_sct observed"(procedure), procedure_category_sct)
 
 //OPS
 define function "OPS observed"(procedure Procedure):
   if procedure.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/ops') is null then
     null
   else
-    ToCodeableConcept({procedure.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/ops')})
+    ToCodeableConcept(procedure.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/ops'))
 
-//define function "Inadmissible categorical values OPS"(procedure Procedure):
-//  NonMatching("OPS observed"(procedure), OPS)
+define function "Inadmissible categorical values OPS"(procedure Procedure):
+  NonMatchingCS("OPS observed"(procedure), OPS)

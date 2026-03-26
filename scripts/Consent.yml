@@ -52,14 +52,17 @@ group:
   - code: "Inadmissible categorical values consent-category Loinc"
     expression: "Inadmissible categorical values consent-category Loinc"
 
- # - code: "MII consent-category observed"
- #   expression: "MII consent-category observed"
+  - code: "MII consent-category observed"
+    expression: "MII consent-category observed"
 
-#  - code: "Provision Type observed"
-#    expression: "Provision Type observed"
+  - code: "Inadmissible categorical values MII consent-category"
+    expression: "Inadmissible categorical values MII consent-category"
 
-#  - code: "Inadmissible categorical values Provision Type"
-#    expression: "Inadmissible categorical values Provision Type"
+  - code: "Provision Type observed"
+    expression: "Provision Type observed"
+
+  - code: "Inadmissible categorical values Provision Type"
+    expression: "Inadmissible categorical values Provision Type"
 
 #Contradictions
 ##DQI: Logical Contradictions

@@ -82,25 +82,28 @@ define function "Inadmissible categorical values consent-category Loinc"(consent
 
 
 // mii-cs-consent-consent_category
-/*  
+ 
 define function "MII consent-category observed"(consent Consent):
-    if consent.category.coding.where(system='https://www.medizininformatik-initiative.de/fhir/modul-consent/CodeSystem/mii-cs-consent-consent_category') is null then
+  if consent.category.coding.where(system='https://www.medizininformatik-initiative.de/fhir/modul-consent/CodeSystem/mii-cs-consent-consent_category') is null then
     null
   else
-    ToCodeableConcept({consent.category.coding.where(system='https://www.medizininformatik-initiative.de/fhir/modul-consent/CodeSystem/mii-cs-consent-consent_category')})
+    ToCodeableConcept(consent.category.coding.where(system='https://www.medizininformatik-initiative.de/fhir/modul-consent/CodeSystem/mii-cs-consent-consent_category'))
 
 define function "Inadmissible categorical values MII consent-category"(consent Consent):
   NonMatching("MII consent-category observed"(consent), ConsentCategory)
-*/
-// Provision Type
-//define function "Provision Type observed"(consent Consent):
-//  if consent.provision.type is null then
-//    null
-//  else
-//    ToCodeableConcept({consent.provision.type})
 
-//define function "Inadmissible categorical values Provision Type"(consent Consent):
-//  NonMatching(consent.provision.type, ConsentProvisionType)
+// Provision Type
+define function "Provision Type observed"(consent Consent):
+  if consent.provision.type is null then
+    null
+  else
+    consent.provision.type
+
+define function "Inadmissible categorical values Provision Type"(consent Consent):
+   if consent.provision.type in ConsentProvisionType then
+    null
+  else
+    consent.provision.type
 
 
 
