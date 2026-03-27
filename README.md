@@ -58,6 +58,14 @@ A [Script Guide](docs/script-guide.md), explaining how the scripts are build, is
 
 Rendered HTML reports of the example scripts over the test data can be found in the `reports` directory.
 
+## Check Names
+
+You can extrat a table of check names from the scripts using the following script:
+
+```sh
+./extract-check-names.sh
+```
+
 [1]: <https://simplifier.net/organization/koordinationsstellemii>
 [2]: <https://hl7.org/fhir/R4/clinicalreasoning-quality-reporting.html>
 [3]: <https://cql.hl7.org>
