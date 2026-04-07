@@ -113,4 +113,4 @@ DQI: Logical Contradictions
 */
 
 define function "Consent-Policy - Ende der Gültigkeit vor Beginn der Gültigkeit"(consent Consent):
-  consent.provision.period.start > consent.provision.period.end
+  (consent.provision.period.start > consent.provision.period.end) is true
