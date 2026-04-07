@@ -2,13 +2,13 @@ library "Condition"
 using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1'
 
-valueset ICD10: 'http://fhir.de/CodeSystem/bfarm/icd-10-gm' //	http://fhir.de/ValueSet/bfarm/icd-10-gm OR 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm'
+codesystem ICD10: 'http://fhir.de/CodeSystem/bfarm/icd-10-gm' //	http://fhir.de/ValueSet/bfarm/icd-10-gm OR 'https://www.medizininformatik-initiative.de/fhir/core/modul-diagnose/ValueSet/mii-vs-diagnose-icd10gm'
 valueset Verifizierungsstatus: 'http://hl7.org/fhir/ValueSet/condition-ver-status'
 valueset "Klinischer Status": 'http://hl7.org/fhir/ValueSet/condition-clinical'
 valueset Diagnosesicherheit: 'https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ICD_DIAGNOSESICHERHEIT'
 valueset Seitenlokalisation: 'https://fhir.kbv.de/ValueSet/KBV_VS_SFHIR_ICD_SEITENLOKALISATION'
 valueset "Mehrfachkodierungs-Kennzeichen": 'http://fhir.de/ValueSet/icd-10-gm-mehrfachcodierungs-kennzeichen'
-valueset "Körperstelle": 'http://hl7.org/fhir/ValueSet/body-site'
+valueset "BodySite": 'http://hl7.org/fhir/ValueSet/body-site'
 
 context Patient
 
@@ -26,8 +26,17 @@ define function ToCodeableConcept(codings List<Coding>):
     null
 
 //NonMatching prüft momentan nur Codes und kein display  
-define function NonMatching(concept CodeableConcept, valueset System.ValueSet):
+define function NonMatchingVS(concept CodeableConcept, valueset System.ValueSet):
   if FHIRHelpers.ToConcept(concept) in valueset then
+    null
+  else
+    concept
+ 
+//NonMatching Codesystem
+define function NonMatchingCS(concept CodeableConcept, codesystem System.CodeSystem):
+  if concept is null then
+    null
+  else if FHIRHelpers.ToConcept(concept) in codesystem then
     null
   else
     concept
@@ -49,16 +58,43 @@ define function "Missing values Primaerdiagnose"(condition Condition):
   exists(
     condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-related').value
   )
-  
-// Feststellungsdatum
+
 define function "Missing values Feststellungsdatum"(condition Condition):
   exists(
     condition.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/condition-assertedDate').value
   )
 
+define function "Missing values clinicalStatus"(condition Condition):
+  exists(condition.clinicalStatus)
+
+
+define function "Missing values Verifizierungsstatus"(condition Condition):
+  exists(condition.verificationStatus)
+
+
 define function "Missing values ICD10"(condition Condition):
   exists(
     condition.code.coding.where(system = 'http://fhir.de/CodeSystem/bfarm/icd-10-gm')
+  )
+
+define function "Missing values alpha-id"(condition Condition):
+  exists(
+    condition.code.coding.where(system = 'http://fhir.de/CodeSystem/bfarm/alpha-id')
+  )
+
+define function "Missing values SNOMED"(condition Condition):
+  exists(
+    condition.code.coding.where(system = 'http://snomed.info/sct')
+  )
+
+define function "Missing values Orpha"(condition Condition):
+  exists(
+    condition.code.coding.where(system = 'http://www.orpha.net')
+  )
+
+define function "Missing values bodySite"(condition Condition):
+  exists(
+    condition.bodySite.coding.where(system = 'http://snomed.info/sct')
   )
 
 define function "Missing values subject"(condition Condition):
@@ -71,33 +107,14 @@ define function "Missing values encounter"(condition Condition):
     condition.encounter.reference
   )
 
+define function "Missing values Klinischer Zeitraum"(condition Condition):
+  condition.onset is not null
+
 
 define function "Missing values recordedDate"(condition Condition):
   exists(
     condition.recordedDate
   )
-
-
-define function "Missing values Klinischer Zeitraum"(condition Condition):
-  condition.onset is not null
-
-define function "Missing values clinicalStatus"(condition Condition):
-  exists(condition.clinicalStatus)
-
-
-define function "Missing values Verifizierungsstatus"(condition Condition):
-  exists(condition.verificationStatus)
-
-define function "Missing values Diagnosesicherheit"(condition Condition):
-  exists(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').value)
-
-define function "Missing values Seitenlokalisation"(condition Condition):
-  exists(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/seitenlokalisation').value)
-
-
-define function "Missing values icd-10-gm-mehrfachcodierungs-kennzeichen"(condition Condition):
-  exists(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen').value)
-
 
 /* 
 Consistency 
@@ -106,7 +123,6 @@ DQI: Inadmissble categorical values
 
 //ICD10
 
-/*   
 define function "icd-10-gm observed"(condition Condition):
   if condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm') is null then
     null
@@ -114,9 +130,7 @@ define function "icd-10-gm observed"(condition Condition):
     ToCodeableConcept({condition.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm')})
 
 define function "Inadmissible categorical values icd-10-gm"(condition Condition):
-  NonMatching("icd-10-gm observed"(condition), ICD10)
-
-*/
+  NonMatchingCS("icd-10-gm observed"(condition), ICD10)
 
 
 // Verifizierungsstatus
@@ -132,14 +146,14 @@ define function "Klinischer Status observed"(condition Condition):
   condition.clinicalStatus
 
 define function "Inadmissible categorical values Klinischer Status"(condition Condition):
-  NonMatching(condition.clinicalStatus, "Klinischer Status")
+  NonMatchingVS(condition.clinicalStatus, "Klinischer Status")
 
 // Diagnosesicherheit
 define function "Diagnosesicherheit observed"(condition Condition):
   ToCodeableConcept(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/icd-10-gm-diagnosesicherheit').value)
 
 define function "Inadmissible categorical values Diagnosesicherheit"(condition Condition):
-  NonMatching("Diagnosesicherheit observed"(condition), Diagnosesicherheit)
+  NonMatchingVS("Diagnosesicherheit observed"(condition), Diagnosesicherheit)
 
 
 // Seitenlokalisation
@@ -147,14 +161,23 @@ define function "Seitenlokalisation observed"(condition Condition):
   ToCodeableConcept(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/seitenlokalisation').value)
 
 define function "Inadmissible categorical values Seitenlokalisation"(condition Condition):
-  NonMatching("Seitenlokalisation observed"(condition), Seitenlokalisation)
+  NonMatchingVS("Seitenlokalisation observed"(condition), Seitenlokalisation)
+
+
+// bodySite
+define function "bodySite observed"(condition Condition):
+  ToCodeableConcept(condition.bodySite.coding.where(system = 'http://snomed.info/sct'))
+
+define function "Inadmissible categorical values Seitenlokalisation"(condition Condition):
+  NonMatchingVS("bodySite observed"(condition), BodySite)
+
 
 // Mehrfachkodierungs-Kennzeichen
 define function "Mehrfachkodierungs-Kennzeichen observed"(condition Condition):
   ToCodeableConcept(condition.code.coding.extension.where(url = 'http://fhir.de/StructureDefinition/icd-10-gm-mehrfachcodierungs-kennzeichen').value)
 
 define function "Inadmissible categorical values Mehrfachkodierungs-Kennzeichen"(condition Condition):
-  NonMatching("Mehrfachkodierungs-Kennzeichen observed"(condition), "Mehrfachkodierungs-Kennzeichen")
+  NonMatchingVS("Mehrfachkodierungs-Kennzeichen observed"(condition), "Mehrfachkodierungs-Kennzeichen")
 
 
 /* 

@@ -22,14 +22,20 @@ group:
   - code: "Missing values Feststellungsdatum"
     expression: "Missing values Feststellungsdatum"
 
-  - code: "Missing values Feststellungsdatum"
-    expression: "Missing values Feststellungsdatum"
-
-  - code: "Missing values Feststellungsdatum"
-    expression: "Missing values Feststellungsdatum"
-
   - code: "Missing values ICD10"
     expression: "Missing values ICD10"
+
+  - code: "Missing values alpha-id"
+    expression: "Missing values alpha-id"
+
+  - code: "Missing values SNOMED"
+    expression: "Missing values SNOMED"
+
+  - code: "Missing values Orpha"
+    expression: "Missing values Orpha"
+
+  - code: "Missing values bodySite"
+    expression: "Missing values bodySite"
 
   - code: "Missing values subject"
     expression: "Missing values subject"
@@ -37,11 +43,11 @@ group:
   - code: "Missing values encounter"
     expression: "Missing values encounter"
 
-  - code: "Missing values recordedDate"
-    expression: "Missing values recordedDate"
-
   - code: "Missing values Klinischer Zeitraum"
     expression: "Missing values Klinischer Zeitraum"
+
+  - code: "Missing values recordedDate"
+    expression: "Missing values recordedDate"
 
   - code: "Missing values clinicalStatus"
     expression: "Missing values clinicalStatus"
@@ -49,23 +55,16 @@ group:
   - code: "Missing values Verifizierungsstatus"
     expression: "Missing values Verifizierungsstatus"
 
-  - code: "Missing values Diagnosesicherheit"
-    expression: "Missing values Diagnosesicherheit"
 
-  - code: "Missing values Seitenlokalisation"
-    expression: "Missing values Seitenlokalisation"
-
-  - code: "Missing values icd-10-gm-mehrfachcodierungs-kennzeichen"
-    expression: "Missing values icd-10-gm-mehrfachcodierungs-kennzeichen"
 
 #Consistency 
 ## DQI: Inadmissble categorical values
 
-#  - code: "icd-10-gm observed"
-#    expression: "icd-10-gm observed"
+  - code: "icd-10-gm observed"
+    expression: "icd-10-gm observed"
 
-#  - code: "Inadmissible categorical values icd-10-gm"
-#    expression: "Inadmissible categorical values icd-10-gm"
+  - code: "Inadmissible categorical values icd-10-gm"
+    expression: "Inadmissible categorical values icd-10-gm"
 
 
   - code: "Verifizierungsstatus observed"
@@ -75,14 +74,11 @@ group:
     expression: "Inadmissible categorical values Verifizierungsstatus"
 
 
-
   - code: "Klinischer Status observed"
     expression: "Klinischer Status observed"
 
   - code: "Inadmissible categorical values Klinischer Status"
     expression: "Inadmissible categorical values Klinischer Status"
-
-
 
   - code: "Diagnosesicherheit observed"
     expression: "Diagnosesicherheit observed"
@@ -90,12 +86,17 @@ group:
   - code: "Inadmissible categorical values Diagnosesicherheit"
     expression: "Inadmissible categorical values Diagnosesicherheit"
 
-
   - code: "Seitenlokalisation observed"
     expression: "Seitenlokalisation observed"
 
   - code: "Inadmissible categorical values Seitenlokalisation"
     expression: "Inadmissible categorical values Seitenlokalisation"
+
+  - code: "bodySite observed"
+    expression: "bodySite observed"
+
+  - code: "Inadmissible categorical values bodySite"
+    expression: "Inadmissible categorical values bodySite"
 
   - code: "Mehrfachkodierungs-Kennzeichen observed"
     expression: "Mehrfachkodierungs-Kennzeichen observed"
