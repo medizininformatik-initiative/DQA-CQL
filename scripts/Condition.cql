@@ -168,7 +168,7 @@ define function "Inadmissible categorical values Seitenlokalisation"(condition C
 define function "bodySite observed"(condition Condition):
   ToCodeableConcept(condition.bodySite.coding.where(system = 'http://snomed.info/sct'))
 
-define function "Inadmissible categorical values Seitenlokalisation"(condition Condition):
+define function "Inadmissible categorical values bodySite"(condition Condition):
   NonMatchingVS("bodySite observed"(condition), BodySite)
 
 
