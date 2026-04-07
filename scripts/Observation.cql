@@ -165,4 +165,4 @@ DQI: Logical Contradictions
 */
 
 define function "Dokumentationsdatum ist vor ist vor Untersuchungszeitpunkt"(Observation Observation):
-  Observation.issued < Observation.effective
+  (Observation.issued < Observation.effective) is true
