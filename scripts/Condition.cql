@@ -139,7 +139,7 @@ define function "Verifizierungsstatus observed"(condition Condition):
 
 
 define function "Inadmissible categorical values Verifizierungsstatus"(condition Condition):
-  NonMatching(condition.verificationStatus, "Verifizierungsstatus")
+  NonMatchingVS(condition.verificationStatus, "Verifizierungsstatus")
 
 // Klinischer Status
 define function "Klinischer Status observed"(condition Condition):
@@ -168,7 +168,7 @@ define function "Inadmissible categorical values Seitenlokalisation"(condition C
 define function "bodySite observed"(condition Condition):
   ToCodeableConcept(condition.bodySite.coding.where(system = 'http://snomed.info/sct'))
 
-define function "Inadmissible categorical values Seitenlokalisation"(condition Condition):
+define function "Inadmissible categorical values bodySite"(condition Condition):
   NonMatchingVS("bodySite observed"(condition), BodySite)
 
 
@@ -197,4 +197,3 @@ define function "Klinischer Zeitraum type"(condition Condition):
 
 define function "Klinischer Zeitraum Ende ist vor klinischer Zeitraum Start"(condition Condition):
   (condition.onset.start > condition.onset.end) is true 
-

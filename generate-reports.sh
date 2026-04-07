@@ -1,4 +1,5 @@
-#!/bin/bash -e
+#!/bin/bash
+set -euo pipefail
 
 SERVER_URL="http://localhost:8080/fhir"
 SCRIPT_DIR="scripts"
