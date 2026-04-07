@@ -196,4 +196,5 @@ define function "Klinischer Zeitraum type"(condition Condition):
   end
 
 define function "Klinischer Zeitraum Ende ist vor klinischer Zeitraum Start"(condition Condition):
-  condition.onset.start > condition.onset.end
+  (condition.onset.start > condition.onset.end) is true 
+
