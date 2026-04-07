@@ -95,4 +95,4 @@ define function "Einnahmedauer type"(ms MedicationStatement):
   end
 
 define function "Einnahmedauer Ende ist vor Einnahmedauer Start"(ms MedicationStatement):
-  ms.effective.start > ms.effective.end
+  (ms.effective.start > ms.effective.end) is true
