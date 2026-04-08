@@ -35,8 +35,11 @@ DQI: Missing values
 define function "Missing values Consent.id" (consent Consent): 
   consent.id is not null
 
-define function "Missing values Consent.meta" (consent Consent): 
-  consent.meta is not null
+define function "Missing values Consent.meta.source" (consent Consent): 
+  consent.meta.source is not null
+
+define function "Missing values Consent.meta.profile" (consent Consent): 
+  consent.meta.profile is not null
 
 define function "Missing values Consent.status" (consent Consent): 
   consent.status is not null
@@ -51,10 +54,22 @@ define function "Missing values Patient" (consent Consent):
   exists(consent.patient.reference)
 
 define function "Missing values Erstellungszeitpunkt"(consent Consent): 
-    exists(consent.dateTime)
+  exists(consent.dateTime)
 
-define function "Missing values policy"(consent Consent): 
-  exists(consent.policy)
+define function "Missing values Organization"(consent Consent): 
+  exists(consent.organization)
+
+define function "Missing values Source"(consent Consent): 
+  exists(consent.source.reference)
+
+define function "Missing values policy.uri"(consent Consent): 
+  exists(consent.policy.uri)
+
+define function "Missing values policyRule"(consent Consent): 
+  exists(consent.policyRule.extension)
+
+define function "Missing values provision.type"(consent Consent): 
+  exists(consent.provision.type)
 
 define function "Missing values Beginn der Gültigkeit der Consent-Policy"(consent Consent): 
   exists(consent.provision.period.start)
@@ -62,8 +77,22 @@ define function "Missing values Beginn der Gültigkeit der Consent-Policy"(conse
 define function "Missing values Ende der Gültigkeit der Consent-Policy"(consent Consent): 
   exists(consent.provision.period.end)
 
-define function "Missing values provision type"(consent Consent): 
-  exists(consent.provision.type)
+define function "Missing values provision.provision.type"(consent Consent): 
+  exists(consent.provision.provision.type)
+
+define function "Missing values provision.provision.period.start"(consent Consent): 
+  exists(consent.provision.provision.period.start)
+
+define function "Missing values provision.provision.period.end"(consent Consent): 
+  exists(consent.provision.provision.period.end)
+
+define function "Missing values Consent.provision.provision.code.coding.system"(consent Consent): 
+  exists(consent.provision.provision.code.coding.system)
+
+define function "Missing values Consent.provision.provision.code.coding.code"(consent Consent): 
+  exists(consent.provision.provision.code.coding.code)
+
+
 
 /* 
 Consistency 

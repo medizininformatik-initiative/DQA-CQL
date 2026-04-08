@@ -6,6 +6,105 @@ group:
   - expression: InInitialPopulation
   stratifier:
 
+library: scripts/Consent.cql
+group: 
+- type: Consent
+  code: Consent
+  population:
+  - expression: InInitialPopulation
+  stratifier:
+
+
+#Completeness 
+## DQI: Missing values
+
+  - code: "Missing values Consent.id"
+    expression: "Missing values Consent.id"
+
+  - code: "Missing values Consent.meta.source"
+    expression: "Missing values Consent.meta.source"
+  
+  - code: "Missing values Consent.meta.profile"
+    expression: "Missing values Consent.meta.profile"
+
+  - code: "Missing values Consent.status"
+    expression: "Missing values Consent.status"
+
+  - code: "Missing values consent-category Loinc"
+    expression: "Missing values consent-category Loinc"
+
+  - code: "Missing values MII consent-category"
+    expression: "Missing values MII consent-category"
+
+  - code: "Missing values Patient"
+    expression: "Missing values Patient"
+
+  - code: "Missing values Erstellungszeitpunkt"
+    expression: "Missing values Erstellungszeitpunkt"
+
+  - code: "Missing values Organization"
+    expression: "Missing values Organization"
+
+  - code: "Missing values Source"
+    expression: "Missing values Source"
+
+  - code: "Missing values policy.uri"
+    expression: "Missing values policy.uri"
+
+  - code: "Missing values policyRule"
+    expression: "Missing values policyRule"
+
+  - code: "Missing values provision.type"
+    expression: "Missing values provision.type"
+
+  - code: "Missing values Beginn der Gültigkeit der Consent-Policy"
+    expression: "Missing values Beginn der Gültigkeit der Consent-Policy"
+
+  - code: "Missing values Ende der Gültigkeit der Consent-Policy"
+    expression: "Missing values Ende der Gültigkeit der Consent-Policy"
+
+  - code: "Missing values provision.provision.type"
+    expression: "Missing values provision.provision.type"
+
+  - code: "Missing values provision.provision.period.start"
+    expression: "Missing values provision.provision.period.start"
+
+  - code: "Missing values provision.provision.period.end"
+    expression: "Missing values provision.provision.period.end"
+
+  - code: "Missing values Consent.provision.provision.code.coding.system"
+    expression: "Missing values Consent.provision.provision.code.coding.system"
+
+  - code: "Missing values Consent.provision.provision.code.coding.code"
+    expression: "Missing values Consent.provision.provision.code.coding.code"
+
+
+#Consistency 
+## DQI: Inadmissble categorical values
+
+  - code: "consent-category Loinc observed"
+    expression: "consent-category Loinc observed"
+
+  - code: "Inadmissible categorical values consent-category Loinc"
+    expression: "Inadmissible categorical values consent-category Loinc"
+
+  - code: "MII consent-category observed"
+    expression: "MII consent-category observed"
+
+  - code: "Inadmissible categorical values MII consent-category"
+    expression: "Inadmissible categorical values MII consent-category"
+
+  - code: "Provision Type observed"
+    expression: "Provision Type observed"
+
+  - code: "Inadmissible categorical values Provision Type"
+    expression: "Inadmissible categorical values Provision Type"
+
+#Contradictions
+##DQI: Logical Contradictions
+
+  - code: "Consent-Policy - Ende der Gültigkeit vor Beginn der Gültigkeit"
+    expression: "Consent-Policy - Ende der Gültigkeit vor Beginn der Gültigkeit"
 
 #Completeness 
 ## DQI: Missing values
