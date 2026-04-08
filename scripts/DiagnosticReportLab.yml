@@ -12,17 +12,38 @@ group:
   - code: "Missing values DiagnosticReport.id"
     expression: "Missing values DiagnosticReport.id"
 
-  - code: "Missing values meta"
-    expression: "Missing values meta"
+  - code: "Missing values meta.source"
+    expression: "Missing values meta.source"
+
+  - code: "Missing values meta.profile"
+    expression: "Missing values meta.profile"
 
   - code: "Missing values identifierType"
     expression: "Missing values identifierType"
 
+  - code: "Missing values identifierTypeSystem"
+    expression: "Missing values identifierTypeSystem"
+
+  - code: "Missing values identifierSystem"
+    expression: "Missing values identifierSystem"
+
   - code: "Missing values identifierValue"
     expression: "Missing values identifierValue"
 
-  - code: "Missing values basedOn"
-    expression: "Missing values basedOn"
+  - code: "Missing values assigner"
+    expression: "Missing values assigner"
+
+  - code: "Missing values basedOn.reference"
+    expression: "Missing values basedOn.reference"
+
+  - code: "Missing values basedOn.identifier"
+    expression: "Missing values basedOn.identifier"
+
+  - code: "Missing values status"
+    expression: "Missing values status"
+
+  - code: "Missing values category.system"
+    expression: "Missing values category.system"
 
   - code: "Missing values LOINC"
     expression: "Missing values LOINC"
@@ -33,14 +54,17 @@ group:
   - code: "Missing values LOINC.Befund"
     expression: "Missing values LOINC.Befund"
 
-  - code: "Missing values subject"
-    expression: "Missing values subject"
+  - code: "Missing values subject.reference"
+    expression: "Missing values subject.reference"
 
-  - code: "Missing values encounter"
-    expression: "Missing values encounter"
+  - code: "Missing values subject.identifier"
+    expression: "Missing values subject.identifier"
 
-  - code: "Missing values observation"
-    expression: "Missing values observation"
+  - code: "Missing values encounter.reference"
+    expression: "Missing values encounter.reference"
+
+  - code: "Missing values encounter.identifier"
+    expression: "Missing values encounter.identifier"
 
   - code: "Effective type"
     expression: "Effective type"
@@ -50,6 +74,26 @@ group:
 
   - code: "Missing values Dokumentationsdatum"
     expression: "Missing values Dokumentationsdatum"
+
+  - code: "Missing values performer.reference"
+    expression: "Missing values performer.reference"
+
+  - code: "Missing values performer.identifier"
+    expression: "Missing values performer.identifier"
+
+  - code: "Missing values specimen.reference"
+    expression: "Missing values specimen.reference"
+
+  - code: "Missing values specimen.identifier"
+    expression: "Missing values specimen.identifier"
+
+  - code: "Missing values result.reference"
+    expression: "Missing values result.reference"
+
+  - code: "Missing values conclusion"
+    expression: "Missing values conclusion"
+
+
 
 #Consistency 
 ## DQI: Inadmissble categorical values
