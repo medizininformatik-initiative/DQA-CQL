@@ -10,11 +10,6 @@ valueset ReportCodes: 'http://hl7.org/fhir/ValueSet/report-codes'
 
 context Patient
 
-/*  
-define "InInitialPopulation":
-  [DiagnosticReport]
-*/
-
 define "InInitialPopulation":
   from [DiagnosticReport] DR
     where exists DR.meta.profile.where(StartsWith($this,
@@ -45,8 +40,17 @@ DQI: Missing values
 define function "Missing values DiagnosticReport.id"(DiagnosticReport DiagnosticReport): 
   DiagnosticReport.id is not null
 
-define function "Missing values meta"(DiagnosticReport DiagnosticReport): 
-  DiagnosticReport.meta is not null
+define function "Missing values meta.lastUpdated"(DiagnosticReport DiagnosticReport): 
+  DiagnosticReport.meta.lastUpdated is not null
+
+define function "Missing values meta.profile"(DiagnosticReport DiagnosticReport): 
+  DiagnosticReport.meta.profile is not null
+
+define function "Missing values text"(DiagnosticReport DiagnosticReport): 
+  DiagnosticReport.text is not null
+
+define function "Missing values identifierSystem"(DiagnosticReport DiagnosticReport): 
+  DiagnosticReport.identifier.system is not null
 
 define function "Missing values identifierType"(DiagnosticReport DiagnosticReport): 
   DiagnosticReport.identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203') is not null
@@ -59,6 +63,12 @@ define function "Missing values ServiceRequest"(DiagnosticReport DiagnosticRepor
 
 define function "Missing values Status"(DiagnosticReport DiagnosticReport): 
   DiagnosticReport.status is not null
+
+define function "Missing values category"(DiagnosticReport DiagnosticReport): 
+  DiagnosticReport.category is not null
+
+define function "Missing values Pathology report system"(DiagnosticReport DiagnosticReport): 
+  DiagnosticReport.code.coding.system is not null
 
 define function "Missing values Pathology report code"(DiagnosticReport DiagnosticReport): 
   DiagnosticReport.code.coding.where(system='http://loinc.org') is not null
@@ -90,8 +100,17 @@ define function "Missing values specimen"(DiagnosticReport DiagnosticReport):
 define function "Missing values result"(DiagnosticReport DiagnosticReport): 
   DiagnosticReport.result is not null
 
+define function "Missing values imagingStudy"(DiagnosticReport DiagnosticReport): 
+  DiagnosticReport.imagingStudy is not null
+
+define function "Missing values media.link"(DiagnosticReport DiagnosticReport): 
+  DiagnosticReport.media.link is not null
+
 define function "Missing values Schlussfolgerungscode"(DiagnosticReport DiagnosticReport): 
   DiagnosticReport.conclusionCode.coding.where(system='http://fhir.de/CodeSystem/bfarm/icd-10-gm') is not null
+
+define function "Missing values presentedForm"(DiagnosticReport DiagnosticReport): 
+  DiagnosticReport.presentedForm is not null
 
 /* 
 Consistency 

@@ -12,8 +12,17 @@ group:
   - code: "Missing values DiagnosticReport.id"
     expression: "Missing values DiagnosticReport.id"
 
-  - code: "Missing values meta"
-    expression: "Missing values meta"
+  - code: "Missing values meta.lastUpdated"
+    expression: "Missing values meta.lastUpdated"
+
+  - code: "Missing values meta.profile"
+    expression: "Missing values meta.profile"
+
+  - code: "Missing values text"
+    expression: "Missing values text"
+
+  - code: "Missing values identifierSystem"
+    expression: "Missing values identifierSystem"
 
   - code: "Missing values identifierType"
     expression: "Missing values identifierType"
@@ -26,6 +35,12 @@ group:
 
   - code: "Missing values Status"
     expression: "Missing values Status"
+
+  - code: "Missing values category"
+    expression: "Missing values category"
+
+  - code: "Missing values Pathology report system"
+    expression: "Missing values Pathology report system"
 
   - code: "Missing values Pathology report code"
     expression: "Missing values Pathology report code"
@@ -51,8 +66,20 @@ group:
   - code: "Missing values result"
     expression: "Missing values result"
 
+  - code: "Missing values result"
+    expression: "Missing values result"
+
+  - code: "Missing values imagingStudy"
+    expression: "Missing values imagingStudy"
+
+  - code: "Missing values media.link"
+    expression: "Missing values media.link"
+
   - code: "Missing values Schlussfolgerungscode"
     expression: "Missing values Schlussfolgerungscode"
+
+  - code: "Missing values presentedForm"
+    expression: "Missing values presentedForm"
 
 #Consistency 
 ## DQI: Inadmissble categorical values
