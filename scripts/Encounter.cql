@@ -50,7 +50,10 @@ DQI: Missing values
 
 define function "Missing values Encounter.id" (encounter Encounter): 
   encounter.id is not null
-  
+
+define function "Missing values Encounter.meta.source"(encounter Encounter): 
+  exists(encounter.meta.source)
+
 define function "Missing values Encounter.meta.profile"(encounter Encounter): 
   exists(encounter.meta.profile)
 
@@ -102,7 +105,7 @@ define function "Missing values Encounter.Aufnahmegrund.VierteStelle.code"(encou
      .value.code
   )
 
-  define function "Missing values Encounter.Aufnahmegrund.VierteStelle.display"(encounter Encounter):
+define function "Missing values Encounter.Aufnahmegrund.VierteStelle.display"(encounter Encounter):
   exists(
     encounter.extension
      .where(url = 'http://fhir.de/StructureDefinition/Aufnahmegrund')
@@ -111,8 +114,17 @@ define function "Missing values Encounter.Aufnahmegrund.VierteStelle.code"(encou
      .value.display
   )
 
-define function "Missing values Aufnahmenummer"(encounter Encounter):
-  exists (encounter.identifier.where(type ~ "Visit number").value)
+define function "Missing values identifier.type.system"(encounter Encounter):
+  exists(encounter.identifier.type.coding.system)
+
+define function "Missing values identifier.type.code"(encounter Encounter):
+  exists(encounter.identifier.type.coding.code)
+
+define function "Missing values Aufnahmenummer.system"(encounter Encounter):
+  exists(encounter.identifier.where(type ~ "Visit number").system)
+
+define function "Missing values Aufnahmenummer.value"(encounter Encounter):
+  exists(encounter.identifier.where(type ~ "Visit number").value)
 
 define function "Missing values Encounter.status"(encounter Encounter):
   encounter.status is not null
@@ -136,6 +148,10 @@ define function "Missing values Kontaktart.code"(encounter Encounter):
   exists(encounter.type.coding.where(system='http://fhir.de/CodeSystem/kontaktart-de').code) 
 
 // Fachabteilung
+
+define function "Missing values serviceType.system"(encounter Encounter):
+  exists(encounter.serviceType.coding.system)
+
 define function "Missing values Fachabteilung.code"(encounter Encounter):
   exists(encounter.serviceType.coding.where(system='http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel').code) 
 
@@ -178,7 +194,7 @@ define function "Missing values Diagnosesubtyp.display"(encounter Encounter):
 
 // hospitalization
 define function "Missing values Aufnahmeanlass"(encounter Encounter):
- exists(encounter.hospitalization.admitSource.coding)
+ exists(encounter.hospitalization.admitSource)
 
 define function "Missing values Entlassgrund"(encounter Encounter):
  exists(encounter.hospitalization.dischargeDisposition)

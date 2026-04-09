@@ -12,6 +12,9 @@ group:
   - code: "Missing values Encounter.id"
     expression: "Missing values Encounter.id"
 
+  - code: "Missing values Encounter.meta.source"
+    expression: "Missing values Encounter.meta.source"
+
   - code: "Missing values Encounter.meta.profile"
     expression: "Missing values Encounter.meta.profile"
 
@@ -32,9 +35,18 @@ group:
   
   - code: "Missing values Encounter.Aufnahmegrund.VierteStelle.display"
     expression: "Missing values Encounter.Aufnahmegrund.VierteStelle.display"
-  
-  - code: "Missing values Aufnahmenummer"
-    expression: "Missing values Aufnahmenummer"
+
+  - code: "Missing values identifier.type.system"
+    expression: "Missing values identifier.type.system"
+
+  - code: "Missing values identifier.type.code"
+    expression: "Missing values identifier.type.code"
+
+  - code: "Missing values Aufnahmenummer.system"
+    expression: "Missing values Aufnahmenummer.system"
+
+  - code: "Missing values Aufnahmenummer.value"
+    expression: "Missing values Aufnahmenummer.value"
 
   - code: "Missing values Encounter.status"
     expression: "Missing values Encounter.status"
@@ -58,6 +70,13 @@ group:
   - code: "Missing values Fachabteilung.display"
     expression: "Missing values Fachabteilung.display"
 
+### Fachabteilung erweitert
+  - code: "Missing values Fachabteilung_erweitert.code"
+    expression: "Missing values Fachabteilung_erweitert.code"
+
+  - code: "Missing values Fachabteilung_erweitert.display"
+    expression: "Missing values Fachabteilung_erweitert.display"
+
 ### Subject
   - code: "Missing values subject"
     expression: "Missing values subject"
@@ -68,13 +87,6 @@ group:
 
   - code: "Missing values period.end"
     expression: "Missing values period.end"
-
-### Hospitalization
-  - code: "Missing values Aufnahmeanlass"
-    expression: "Missing values Aufnahmeanlass"
-
-  - code: "Missing values Entlassgrund"
-    expression: "Missing values Entlassgrund"
 
 ### diagnosis
   - code: "Missing values diagnosis.condition"
@@ -94,6 +106,13 @@ group:
 
   - code: "Missing values partOf"
     expression: "Missing values partOf"
+
+### Hospitalization
+  - code: "Missing values Aufnahmeanlass"
+    expression: "Missing values Aufnahmeanlass"
+
+  - code: "Missing values Entlassgrund"
+    expression: "Missing values Entlassgrund"
 
 # Consistency
 ## DQI: Inadmissible categorical values
