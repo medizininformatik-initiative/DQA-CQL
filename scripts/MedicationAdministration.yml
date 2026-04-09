@@ -13,14 +13,26 @@ group:
   - code: "Missing values MedicationAdministration.id"
     expression: "Missing values MedicationAdministration.id"
 
-  - code: "Missing values MedicationAdministration.meta"
-    expression: "Missing values MedicationAdministration.meta"
+  - code: "Missing values MedicationAdministration.meta.source"
+    expression: "Missing values MedicationAdministration.meta.source"
+
+  - code: "Missing values MedicationAdministration.meta.profile"
+    expression: "Missing values MedicationAdministration.meta.profile"
+
+  - code: "Missing values MedicationAdministration.identifier"
+    expression: "Missing values MedicationAdministration.identifier"
+
+  - code: "Missing values partOf"
+    expression: "Missing values partOf"
 
   - code: "Missing values MedicationAdministration.status"
     expression: "Missing values MedicationAdministration.status"
 
-  - code: "Missing values MedicationAdministration.medicationReference"
-    expression: "Missing values MedicationAdministration.medicationReference"
+  - code: "Missing values MedicationAdministration.category"
+    expression: "Missing values MedicationAdministration.category"
+
+  - code: "Missing values MedicationAdministration.medication"
+    expression: "Missing values MedicationAdministration.medication"
 
   - code: "Missing values Subject"
     expression: "Missing values Subject"
@@ -28,15 +40,50 @@ group:
   - code: "Missing values Context"
     expression: "Missing values Context"
 
-  - code: "Missing values request"
-    expression: "Missing values request"
-
   - code: "Effective type"
     expression: "Effective type"
 
   - code: "Missing values Effective"
     expression: "Missing values Effective"
 
+  - code: "Missing values performer"
+    expression: "Missing values performer"
+
+  - code: "Missing values reasonCode"
+    expression: "Missing values reasonCode"
+
+  - code: "Missing values reasonReference"
+    expression: "Missing values reasonReference"
+
+  - code: "Missing values request"
+    expression: "Missing values request"
+
+  - code: "Missing values note"
+    expression: "Missing values note"
+
+  - code: "Missing values dosage.text"
+    expression: "Missing values dosage.text"
+
+  - code: "Missing values dosage.site"
+    expression: "Missing values dosage.site"
+
+  - code: "Missing values dosage.route"
+    expression: "Missing values dosage.route"
+
+  - code: "Missing values dosage.dose.value"
+    expression: "Missing values dosage.dose.value"
+
+  - code: "Missing values dosage.dose.unit"
+    expression: "Missing values dosage.dose.unit"
+
+  - code: "Missing values dosage.dose.system"
+    expression: "Missing values dosage.dose.system"
+
+  - code: "Missing values dosage.dose.code"
+    expression: "Missing values dosage.dose.code"
+
+  - code: "Missing values dosage.rate"
+    expression: "Missing values dosage.rate"
 
 #Consistency 
 ## DQI: Inadmissible categorical values
