@@ -12,9 +12,14 @@ group:
   - code: "Missing values MedicationRequest.id"
     expression: "Missing values MedicationRequest.id"
   
-  
-  - code: "Missing values MedicationRequest.meta"
-    expression: "Missing values MedicationRequest.meta"
+  - code: "Missing values MedicationRequest.meta.source"
+    expression: "Missing values MedicationRequest.meta.source"
+
+  - code: "Missing values MedicationRequest.meta.profile"
+    expression: "Missing values MedicationRequest.meta.profile"
+
+  - code: "Missing values identifier"
+    expression: "Missing values identifier"
 
   - code: "Missing values Status"
     expression: "Missing values Status"
@@ -22,8 +27,8 @@ group:
   - code: "Missing values Intention"
     expression: "Missing values Intention"
 
-  - code: "Missing values medicationReference"
-    expression: "Missing values medicationReference"
+  - code: "Missing values medication"
+    expression: "Missing values medication"
 
   - code: "Missing values subject"
     expression: "Missing values subject"
@@ -34,11 +39,64 @@ group:
   - code: "Missing values authoredOn"
     expression: "Missing values authoredOn"
 
-  - code: "Missing values dosageInstruction.timing"
-    expression: "Missing values dosageInstruction.timing"
+  - code: "Missing values requester"
+    expression: "Missing values requester"
 
-  - code: "Missing values dosage.route"
-    expression: "Missing values dosage.route"
+  - code: "Missing values reasonCode"
+    expression: "Missing values reasonCode"
+
+  - code: "Missing values reasonReference"
+    expression: "Missing values reasonReference"
+
+  - code: "Missing values basedOn"
+    expression: "Missing values basedOn"
+
+  - code: "Missing values note"
+    expression: "Missing values note"
+
+  - code: "Missing values dosageInstruction.sequence"
+    expression: "Missing values dosageInstruction.sequence"
+
+  - code: "Missing values dosageInstruction.text"
+    expression: "Missing values dosageInstruction.text"
+
+  - code: "Missing values dosageInstruction.timing.event"
+    expression: "Missing values dosageInstruction.timing.event"
+
+  - code: "Missing values dosageInstruction.timing.repeat"
+    expression: "Missing values dosageInstruction.timing.repeat"
+
+  - code: "Missing values dosageInstruction.asNeeded"
+    expression: "Missing values dosageInstruction.asNeeded"
+
+  - code: "Missing values dosageInstruction.site.coding.system"
+    expression: "Missing values dosageInstruction.site.coding.system"
+
+  - code: "Missing values dosageInstruction.site.coding.code"
+    expression: "Missing values dosageInstruction.site.coding.code"
+
+  - code: "Missing values dosageInstruction.route.coding.system"
+    expression: "Missing values dosageInstruction.route.coding.system"
+
+  - code: "Missing values dosageInstruction.route.coding.code"
+    expression: "Missing values dosageInstruction.route.coding.code"
+
+  - code: "Missing values dosageInstruction.doseAndRate"
+    expression: "Missing values dosageInstruction.doseAndRate"
+
+  - code: "Missing values dosageInstruction.maxDosePerPeriod"
+    expression: "Missing values dosageInstruction.maxDosePerPeriod"
+
+  - code: "Missing values dosageInstruction.maxDosePerAdministration"
+    expression: "Missing values dosageInstruction.maxDosePerAdministration"
+
+  - code: "Missing values substitution"
+    expression: "Missing values substitution"
+
+  - code: "Missing values priorPrescription"
+    expression: "Missing values priorPrescription"
+
+
 
 #Consistency 
 ## DQI: Inadmissble categorical values
