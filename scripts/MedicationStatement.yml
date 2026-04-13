@@ -12,17 +12,29 @@ group:
   - code: "Missing values MedicationStatement.id"
     expression: "Missing values MedicationStatement.id"
   
-  - code: "Missing values MedicationStatement.meta"
-    expression: "Missing values MedicationStatement.meta"
+  - code: "Missing values MedicationStatement.meta.source"
+    expression: "Missing values MedicationStatement.meta.source"
+
+  - code: "Missing values MedicationStatement.meta.profile"
+    expression: "Missing values MedicationStatement.meta.profile"
+
+  - code: "Missing values MedicationStatement.identifier"
+    expression: "Missing values MedicationStatement.identifier"
 
   - code: "Missing values MedicationStatement.basedOn"
     expression: "Missing values MedicationStatement.basedOn"
 
+  - code: "Missing values MedicationStatement.partOf"
+    expression: "Missing values MedicationStatement.partOf"
+
   - code: "Missing values MedicationStatement.status"
     expression: "Missing values MedicationStatement.status"
 
-  - code: "Missing values medicationReference"
-    expression: "Missing values medicationReference"
+  - code: "Missing values MedicationStatement.category"
+    expression: "Missing values MedicationStatement.category"
+
+  - code: "Missing values medication"
+    expression: "Missing values medication"
 
   - code: "Missing values subject"
     expression: "Missing values subject"
@@ -30,10 +42,176 @@ group:
   - code: "Missing values context"
     expression: "Missing values context"
 
-  - code: "Missing values dosage.route"
-    expression: "Missing values dosage.route"
+  - code: "Missing values Effective"
+    expression: "Missing values Effective"
+
+  - code: "Missing values dateAsserted"
+    expression: "Missing values dateAsserted"
+
+  - code: "Missing values informationSource"
+    expression: "Missing values informationSource"
+
+  - code: "Missing values reasonCode"
+    expression: "Missing values reasonCode"
+
+  - code: "Missing values reasonReference"
+    expression: "Missing values reasonReference"
+
+  - code: "Missing values note"
+    expression: "Missing values note"
+
+  - code: "Missing values dosage.sequence"
+    expression: "Missing values dosage.sequence"
+
+  - code: "Missing values dosage.text"
+    expression: "Missing values dosage.text"
+
+  - code: "Missing values dosage.timing.event"
+    expression: "Missing values dosage.timing.event"
+
+  - code: "Missing values dosage.timing.repeat"
+    expression: "Missing values dosage.timing.repeat"
+
+  - code: "Missing values dosage.asNeeded"
+    expression: "Missing values dosage.asNeeded"
+
+  - code: "Missing values dosage.site.coding.system"
+    expression: "Missing values dosage.site.coding.system"
+
+  - code: "Missing values dosage.site.coding.code"
+    expression: "Missing values dosage.site.coding.code"
+
+  - code: "Missing values dosage.route.coding.system"
+    expression: "Missing values dosage.route.coding.system"
+
+  - code: "Missing values dosage.route.coding.code"
+    expression: "Missing values dosage.route.coding.code"
+
+  - code: "Missing values dosage.doseAndRate.dose.value"
+    expression: "Missing values dosage.doseAndRate.dose.value"
+
+  - code: "Missing values dosage.doseAndRate.dose.unit"
+    expression: "Missing values dosage.doseAndRate.dose.unit"
+
+  - code: "Missing values dosage.doseAndRate.dose.system"
+    expression: "Missing values dosage.doseAndRate.dose.system"
+
+  - code: "Missing values dosage.doseAndRate.dose.code"
+    expression: "Missing values dosage.doseAndRate.dose.code"
+
+  - code: "Missing values dosage.doseAndRate.dose.low.value"
+    expression: "Missing values dosage.doseAndRate.dose.low.value"
+
+  - code: "Missing values dosage.doseAndRate.dose.low.unit"      
+    expression: "Missing values dosage.doseAndRate.dose.low.unit" 
+
+  - code: "Missing values dosage.doseAndRate.dose.low.system"
+    expression: "Missing values dosage.doseAndRate.dose.low.system" 
+
+  - code: "Missing values dosage.doseAndRate.dose.low.code"
+    expression: "Missing values dosage.doseAndRate.dose.low.code" 
+
+  - code: "Missing values dosage.doseAndRate.dose.high.value"
+    expression: "Missing values dosage.doseAndRate.dose.high.value"
+
+  - code: "Missing values dosage.doseAndRate.dose.high.unit"
+    expression: "Missing values dosage.doseAndRate.dose.high.unit"
+
+  - code: "Missing values dosage.doseAndRate.dose.high.system"
+    expression: "Missing values dosage.doseAndRate.dose.high.system"
+
+  - code: "Missing values dosage.doseAndRate.dose.high.code"
+    expression: "Missing values dosage.doseAndRate.dose.high.code"
 
 
+
+  - code: "Missing values dosage.doseAndRate.rate.numerator.value"
+    expression: "Missing values dosage.doseAndRate.rate.numerator.value"
+
+  - code: "Missing values dosage.doseAndRate.rate.numerator.unit"
+    expression: "Missing values dosage.doseAndRate.rate.numerator.unit"
+
+  - code: "Missing values dosage.doseAndRate.rate.numerator.system"
+    expression: "Missing values dosage.doseAndRate.rate.numerator.system"
+
+  - code: "Missing values dosage.doseAndRate.rate.numerator.code"
+    expression: "Missing values dosage.doseAndRate.rate.numerator.code"
+
+  - code: "Missing values dosage.doseAndRate.rate.denominator.value"
+    expression: "Missing values dosage.doseAndRate.rate.denominator.value"
+
+  - code: "Missing values dosage.doseAndRate.rate.denominator.unit"
+    expression: "Missing values dosage.doseAndRate.rate.denominator.unit"
+
+  - code: "Missing values dosage.doseAndRate.rate.denominator.system"
+    expression: "Missing values dosage.doseAndRate.rate.denominator.system"
+
+  - code: "Missing values dosage.doseAndRate.rate.denominator.code"
+    expression: "Missing values dosage.doseAndRate.rate.denominator.code"
+
+  - code: "Missing values dosage.doseAndRate.rate.low.value"
+    expression: "Missing values dosage.doseAndRate.rate.low.value"
+
+  - code: "Missing values dosage.doseAndRate.rate.low.unit"
+    expression: "Missing values dosage.doseAndRate.rate.low.unit"
+
+  - code: "Missing values dosage.doseAndRate.rate.low.system"
+    expression: "Missing values dosage.doseAndRate.rate.low.system"
+
+  - code: "Missing values dosage.doseAndRate.rate.low.code"
+    expression: "Missing values dosage.doseAndRate.rate.low.code"
+
+  - code: "Missing values dosage.doseAndRate.rate.high.value"
+    expression: "Missing values dosage.doseAndRate.rate.high.value" 
+
+  - code: "Missing values dosage.doseAndRate.rate.high.unit"
+    expression: "Missing values dosage.doseAndRate.rate.high.unit"
+
+  - code: "Missing values dosage.doseAndRate.rate.high.system"
+    expression: "Missing values dosage.doseAndRate.rate.high.system"
+
+  - code: "Missing values dosage.doseAndRate.rate.high.code"
+    expression: "Missing values dosage.doseAndRate.rate.high.code"  
+ 
+
+
+
+  - code: "Missing values dosage.maxDosePerPeriod.numerator.value"
+    expression: "Missing values dosage.maxDosePerPeriod.numerator.value"  
+
+  - code: "Missing values dosage.maxDosePerPeriod.numerator.unit"
+    expression: "Missing values dosage.maxDosePerPeriod.numerator.unit"
+
+  - code: "Missing values dosage.maxDosePerPeriod.numerator.system"
+    expression: "Missing values dosage.maxDosePerPeriod.numerator.system"
+  
+  - code: "Missing values dosage.maxDosePerPeriod.numerator.code"
+    expression: "Missing values dosage.maxDosePerPeriod.numerator.code"
+
+
+  - code: "Missing values dosage.maxDosePerPeriod.denominator.value"
+    expression: "Missing values dosage.maxDosePerPeriod.denominator.value"
+  
+  - code: "Missing values dosage.maxDosePerPeriod.denominator.unit"
+    expression: "Missing values dosage.maxDosePerPeriod.denominator.unit"
+
+  - code: "Missing values dosage.maxDosePerPeriod.denominator.system"
+    expression: "Missing values dosage.maxDosePerPeriod.denominator.system"
+
+  - code: "Missing values dosage.maxDosePerPeriod.denominator.code"
+    expression: "Missing values dosage.maxDosePerPeriod.denominator.code"
+
+  - code: "Missing values dosage.maxDosePerAdministration.value"
+    expression: "Missing values dosage.maxDosePerAdministration.value"
+
+  - code: "Missing values dosage.maxDosePerAdministration.unit"
+    expression: "Missing values dosage.maxDosePerAdministration.unit"
+
+  - code: "Missing values dosage.maxDosePerAdministration.system"
+    expression: "Missing values dosage.maxDosePerAdministration.system"
+
+  - code: "Missing values dosage.maxDosePerAdministration.code"
+    expression: "Missing values dosage.maxDosePerAdministration.code"
 
 #Consistency 
 ## DQI: Inadmissble categorical values
