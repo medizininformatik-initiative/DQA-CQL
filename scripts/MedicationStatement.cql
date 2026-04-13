@@ -109,9 +109,6 @@ define function "Missing values dosage.timing.event"(MedicationStatement Medicat
 define function "Missing values dosage.timing.repeat"(MedicationStatement MedicationStatement): 
   MedicationStatement.dosage.timing.repeat is not null
 
-define function "Missing values dosage.timing.repeat"(MedicationStatement MedicationStatement): 
-  MedicationStatement.dosage.timing.repeat is not null
-
 define function "Missing values dosage.asNeeded"(MedicationStatement MedicationStatement): 
   MedicationStatement.dosage.asNeeded is not null
 
