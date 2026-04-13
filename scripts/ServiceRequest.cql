@@ -52,11 +52,17 @@ DQI: Missing values
 define function "Missing Values ServiceRequest id"(ServiceRequest ServiceRequest):
     ServiceRequest.id is not null
 
-define function "Missing Values ServiceRequest meta"(ServiceRequest ServiceRequest):
-    ServiceRequest.meta is not null
+define function "Missing Values ServiceRequest meta.source"(ServiceRequest ServiceRequest):
+    ServiceRequest.meta.source is not null
+
+define function "Missing Values ServiceRequest meta.profile"(ServiceRequest ServiceRequest):
+    ServiceRequest.meta.profile is not null
 
 define function "Missing Values identifierType"(ServiceRequest ServiceRequest):
     ServiceRequest.identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203') is not null
+
+define function "Missing Values identifier.system"(ServiceRequest ServiceRequest):
+    ServiceRequest.identifier.system is not null
 
 define function "Missing Values identifierValue"(ServiceRequest ServiceRequest):
     ServiceRequest.identifier.value is not null
@@ -84,6 +90,12 @@ define function "Missing Values Encounter"(ServiceRequest ServiceRequest):
 
 define function "Missing Values Anforderungsdatum"(ServiceRequest ServiceRequest):
     ServiceRequest.authoredOn is not null
+
+define function "Missing Values specimen.reference"(ServiceRequest ServiceRequest):
+    ServiceRequest.specimen.reference is not null
+
+define function "Missing Values specimen.identifier"(ServiceRequest ServiceRequest):
+    ServiceRequest.specimen.identifier is not null
 
 /* 
 Consistency 
