@@ -52,8 +52,14 @@ DQI: Missing values
 define function "Missing values Observation.id"(Observation Observation): 
   Observation.id is not null
 
-define function "Missing values meta"(Observation Observation): 
-  Observation.meta is not null
+define function "Missing values meta.source"(Observation Observation): 
+  Observation.meta.source is not null
+
+define function "Missing values meta.profile"(Observation Observation): 
+  Observation.meta.profile is not null 
+
+define function "Missing values modifierExtension"(Observation Observation): 
+  Observation.modifierExtension is not null 
 
 define function "Missing values identifierType"(Observation Observation): 
   Observation.identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203') is not null
@@ -86,19 +92,52 @@ define function "Missing values subject"(Observation Observation):
   Observation.subject is not null
 
 define function "Missing values encounter"(Observation Observation): 
-  Observation.encounter is not null
+  Observation.encounter.reference is not null
 
 define function "Missing values Untersuchungszeitpunkt"(Observation Observation): 
   Observation.effective is not null
 
+define function "Missing values Dokumentationsdatum"(Observation Observation): 
+  Observation.issued is not null
+
 define function "Missing values Messwert"(Observation Observation): 
   Observation.value is not null
+
+define function "Missing values dataAbsentReason"(Observation Observation): 
+  Observation.dataAbsentReason is not null
 
 define function "Missing values Interpretation"(Observation Observation): 
   Observation.interpretation is not null
 
-define function "Missing values Referenzbereich"(Observation Observation): 
-  Observation.referenceRange is not null
+define function "Missing values note"(Observation Observation): 
+  Observation.note is not null
+
+define function "Missing values method.coding.system"(Observation Observation): 
+  Observation.method.coding.system is not null
+
+define function "Missing values method.coding.code"(Observation Observation): 
+  Observation.method.coding.code is not null
+
+define function "Missing values method.coding.display"(Observation Observation): 
+  Observation.method.coding.display is not null
+
+define function "Missing values specimen.reference"(Observation Observation): 
+  Observation.specimen.reference is not null
+
+define function "Missing values specimen.identifier"(Observation Observation): 
+  Observation.specimen.identifier is not null
+
+define function "Missing values device.reference"(Observation Observation): 
+  Observation.device.reference is not null
+
+define function "Missing values device.identifier"(Observation Observation): 
+  Observation.device.identifier is not null
+
+define function "Missing values referenceRange.low"(Observation Observation): 
+  Observation.referenceRange.low is not null
+
+define function "Missing values referenceRange.high"(Observation Observation): 
+  Observation.referenceRange.high is not null
 
 /* 
 Consistency 
