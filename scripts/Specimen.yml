@@ -9,17 +9,17 @@ group:
   - code: "Missing values Specimen ID"
     expression: "Missing values Specimen ID"
 
-  - code: "Missing values Specimen meta"
-    expression: "Missing values Specimen meta"
+  - code: "Missing values Specimen meta.lastUpdated"
+    expression: "Missing values Specimen meta.lastUpdated"
+
+  - code: "Missing values Specimen meta.profile"
+    expression: "Missing values Specimen meta.profile"
 
   - code: "Missing values Specimen Text"
     expression: "Missing values Specimen Text"
 
-  - code: "Missing values identifier Filler-ID"
-    expression: "Missing values identifier Filler-ID"
-
-  - code: "Missing values identifier Placer-ID"
-    expression: "Missing values identifier Placer-ID"
+  - code: "Missing values identifier"
+    expression: "Missing values identifier"
 
   - code: "Missing values Labor-ID"
     expression: "Missing values Labor-ID"
@@ -33,14 +33,24 @@ group:
   - code: "Missing values subject"
     expression: "Missing values subject"
 
+  - code: "Missing values parent"
+    expression: "Missing values parent"
+
+  - code: "Missing values request"
+    expression: "Missing values request"
+
+
   - code: "Missing values Collection time"
     expression: "Missing values Collection time"
 
-  - code: "Missing values quantity"
-    expression: "Missing values quantity"
-
   - code: "Missing values Entnahmemethode"
     expression: "Missing values Entnahmemethode"
+
+  - code: "Missing values collection.bodySite"
+    expression: "Missing values collection.bodySite"
+
+  - code: "Missing values collection.fastingStatus"
+    expression: "Missing values collection.fastingStatus"  
 
   - code: "Missing values Processing"
     expression: "Missing values Processing"
@@ -48,11 +58,14 @@ group:
   - code: "Missing values Probenbehälter"
     expression: "Missing values Probenbehälter"
 
-  - code: "Missing values Container volume or size"
-    expression: "Missing values Container volume or size"
+  - code: "Missing values container.capacity"
+    expression: "Missing values container.capacity"
 
-  - code: "Missing values Quantity of specimen within container"
-    expression: "Missing values Quantity of specimen within container"
+  - code: "Missing values container.specimenQuantity"
+    expression: "Missing values container.specimenQuantity"
+
+  - code: "Missing values note"
+    expression: "Missing values note"
 
 #Consistency 
 ## DQI: Inadmissble categorical values

@@ -46,17 +46,17 @@ DQI: Missing values
 define function "Missing values Specimen ID"(Specimen Specimen):
     exists(Specimen.id)
 
-define function "Missing values Specimen meta"(Specimen Specimen):
-    exists(Specimen.meta)
+define function "Missing values Specimen meta.lastUpdated"(Specimen Specimen):
+    exists(Specimen.meta.lastUpdated)
+
+define function "Missing values Specimen meta.profile"(Specimen Specimen):
+    exists(Specimen.meta.profile)
 
 define function "Missing values Specimen Text"(Specimen Specimen):
     exists(Specimen.text)
 
 define function "Missing values identifier"(Specimen Specimen):
     exists(Specimen.identifier)
-
-define function "Missing values identifier Filler-ID"(Specimen Specimen):
-    exists(Specimen.identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203'))
 
 define function "Missing values identifier Placer-ID"(Specimen Specimen):
     exists(Specimen.identifier.where(system='https://mul-ct.de/fhir/sid/specimen-identifier'))
@@ -73,14 +73,25 @@ define function "Missing values Materialart"(Specimen Specimen):
 define function "Missing values subject"(Specimen Specimen):
     exists(Specimen.subject)
 
-define function "Missing values Collection time"(Specimen Specimen):
-    Specimen.collection.collected is not null
+define function "Missing values parent"(Specimen Specimen):
+    exists(Specimen.parent)
 
-define function "Missing values quantity"(Specimen Specimen):
-    Specimen.collection.quantity is not null
+define function "Missing values request"(Specimen Specimen):
+    exists(Specimen.request)
+
+
+
+define function "Missing values Collection time"(Specimen Specimen):
+  Specimen.collection.collected is not null
 
 define function "Missing values Entnahmemethode"(Specimen Specimen):
-    Specimen.collection.method is not null
+  Specimen.collection.method is not null
+
+define function "Missing values collection.bodySite"(Specimen Specimen):
+  Specimen.collection.bodySite is not null
+
+define function "Missing values collection.fastingStatus"(Specimen Specimen):
+  Specimen.collection.fastingStatus is not null
 
 define function "Missing values Processing"(Specimen Specimen):
     Specimen.processing is not null
@@ -88,13 +99,14 @@ define function "Missing values Processing"(Specimen Specimen):
 define function "Missing values Probenbehälter"(Specimen Specimen):
     Specimen.container.type.coding.where(system='http://snomed.info/sct') is not null
 
-define function "Missing values Container volume or size"(Specimen Specimen):
+define function "Missing values container.capacity"(Specimen Specimen):
     Specimen.container.capacity is not null
 
-define function "Missing values Quantity of specimen within container"(Specimen Specimen):
+define function "Missing values container.specimenQuantity"(Specimen Specimen):
     Specimen.container.specimenQuantity is not null
 
-
+define function "Missing values note"(Specimen Specimen):
+    Specimen.note is not null
 
 /* 
 Consistency 
