@@ -50,28 +50,41 @@ DQI: Missing values
 define function "Missing Values ServiceRequest id"(ServiceRequest ServiceRequest):
     ServiceRequest.id is not null
 
-define function "Missing Values ServiceRequest meta"(ServiceRequest ServiceRequest):
-    ServiceRequest.meta is not null
+define function "Missing Values ServiceRequest meta.source"(ServiceRequest ServiceRequest):
+    ServiceRequest.meta.source is not null
+
+define function "Missing Values ServiceRequest meta.profile"(ServiceRequest ServiceRequest):
+    ServiceRequest.meta.profile is not null
 
 define function "Missing Values identifierType"(ServiceRequest ServiceRequest):
   ServiceRequest.identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203') is not null
     
+define function "Missing Values identifier.system"(ServiceRequest ServiceRequest):
+    ServiceRequest.identifier.system is not null
 
 define function "Missing Values identifierValue"(ServiceRequest ServiceRequest):
     ServiceRequest.identifier.value is not null
 
-define function "Missing Values Identifikator für Auftragsgruppen"(ServiceRequest ServiceRequest):
-    ServiceRequest.requisition is not null
+define function "Missing Values identifier.assigner"(ServiceRequest ServiceRequest):
+    ServiceRequest.identifier.assigner is not null
 
 define function "Missing Values status"(ServiceRequest ServiceRequest):
     ServiceRequest.status is not null
 
+define function "Missing Values intent"(ServiceRequest ServiceRequest):
+    ServiceRequest.intent is not null
+
 define function "Missing Values Kategorie des Untersuchungsauftrags"(ServiceRequest ServiceRequest):
     ServiceRequest.category.coding.where(system='http://snomed.info/sct') is not null
 
+define function "Missing Values code.coding.system"(ServiceRequest ServiceRequest):
+  ServiceRequest.code.coding.system is not null
 
-define function "Missing Values Code für die angeforderte Leistung"(ServiceRequest ServiceRequest):
-  ServiceRequest.code is not null
+define function "Missing Values code.coding.code"(ServiceRequest ServiceRequest):
+  ServiceRequest.code.coding.code is not null
+
+define function "Missing Values code.coding.display"(ServiceRequest ServiceRequest):
+  ServiceRequest.code.coding.display is not null
 
 define function "Missing Values subject"(ServiceRequest ServiceRequest):
   ServiceRequest.subject is not null
@@ -81,9 +94,6 @@ define function "Missing Values encounter"(ServiceRequest ServiceRequest):
 
 define function "Missing Values authoredOn"(ServiceRequest ServiceRequest):
   ServiceRequest.authoredOn is not null
-
-define function "Missing Values requester"(ServiceRequest ServiceRequest):
-  ServiceRequest.requester is not null
 
 define function "Missing Values specimen"(ServiceRequest ServiceRequest):
   ServiceRequest.specimen is not null
@@ -97,8 +107,8 @@ DQI: Inadmissble categorical values
 define function "identifierType observed"(ServiceRequest ServiceRequest):
   ToCodeableConcept(ServiceRequest.identifier.type.coding.where(system='http://terminology.hl7.org/CodeSystem/v2-0203'))
   
-//define function "Inadmissible categorical values identifierType"(ServiceRequest ServiceRequest):
-//  NonMatchingCS("identifierType observed"(ServiceRequest), "v2-0203")
+define function "Inadmissible categorical values identifierType"(ServiceRequest ServiceRequest):
+  NonMatchingCS("identifierType observed"(ServiceRequest), "v2-0203")
 
 // Status
 define function "Status observed"(ServiceRequest ServiceRequest):
