@@ -2,29 +2,38 @@
 
 ## MII Test Data
 
-Test data from https://github.com/medizininformatik-initiative/mii-testdata 
+Test data from https://github.com/medizininformatik-initiative/mii-testdata
+
+The script downloads the bundles to a temporary directory and uploads them to
+Blaze. Override the target server via the `BLAZE_SERVER` environment variable
+(default: `http://localhost:8080/fhir`).
 
 ```sh
 test-data/download-mii-test-data.sh
-blazectl --server http://localhost:8080/fhir upload <temp-dir>
 ```
 
 ## POLAR Test Data
 
-Tes data from https://github.com/medizininformatik-initiative/kerndatensatz-testdaten
+Test data from https://github.com/medizininformatik-initiative/kerndatensatz-testdaten
 
 ```sh
 test-data/download-polar-test-data.sh
-blazectl --server http://localhost:8080/fhir upload <temp-dir>
 ```
 
 ## Vorhofflimmern Test Data
 
-Tes data from https://github.com/medizininformatik-initiative/kerndatensatz-testdaten
+Test data from https://github.com/medizininformatik-initiative/kerndatensatz-testdaten
 
 ```sh
 test-data/download-vorhofflimmern-test-data.sh
-blazectl --server http://localhost:8080/fhir upload <temp-dir>
+```
+
+## Generated Test Data
+
+Synthetic MII KDS conformant FHIR transaction bundles (100 patients) generated locally via `test-data/generate-test-data.py`. The script generates into a temporary directory and uploads to Blaze.
+
+```sh
+test-data/generate-and-upload-test-data.sh
 ```
 
 ## Verify Uploads
@@ -36,35 +45,26 @@ blazectl --server http://localhost:8080/fhir count-resources
 Should output similar numbers:
 
 ```text
-BodyStructure                     :     1
-CarePlan                          :     1
-Composition                       :     1
-Condition                         : 12125
-Consent                           :  9697
-Device                            :    33
-DeviceMetric                      :    10
-DiagnosticReport                  :    13
-Encounter                         : 24089
-FamilyMemberHistory               :     2
-ImagingStudy                      :     1
-Library                           :    14
-List                              :    17
-Measure                           :    14
-Medication                        :   132
-MedicationAdministration          :   143
-MedicationRequest                 :    26
-MedicationStatement               :  1813
-Observation                       : 17051
-Organization                      :    30
-Patient                           : 12047
-Practitioner                      :    12
-PractitionerRole                  :    10
-Procedure                         :    40
-ServiceRequest                    :    13
-Specimen                          :    21
+Condition                         : 12402
+Consent                           :  9797
+Device                            :     3
+DeviceMetric                      :     1
+DiagnosticReport                  :   139
+Encounter                         : 24294
+List                              :    59
+Medication                        :   331
+MedicationAdministration          :   246
+MedicationRequest                 :   133
+MedicationStatement               :  1986
+Observation                       : 18039
+Organization                      :     3
+Patient                           : 12147
+Practitioner                      :     2
+PractitionerRole                  :     1
+Procedure                         :   139
+ServiceRequest                    :   105
+Specimen                          :   100
 StructureDefinition               :   185
-Substance                         :     1
-Task                              :     2
 -----------------------------------------
-total                             : 77544
+total                             : 80112
 ```

@@ -34,8 +34,8 @@ That should output:
 ```json
 {
   "name": "Blaze",
-  "version": "1.2.0",
-  "releaseDate": "2025-11-23"
+  "version": "1.7.0",
+  "releaseDate": "2026-04-28"
 }
 ```
 
