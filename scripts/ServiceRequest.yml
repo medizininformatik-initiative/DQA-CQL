@@ -12,11 +12,17 @@ group:
   - code: "Missing Values ServiceRequest id"
     expression: "Missing Values ServiceRequest id"
 
-  - code: "Missing Values ServiceRequest meta"
-    expression: "Missing Values ServiceRequest meta"
+  - code: "Missing Values ServiceRequest meta.source"
+    expression: "Missing Values ServiceRequest meta.source"
+
+  - code: "Missing Values ServiceRequest meta.profile"
+    expression: "Missing Values ServiceRequest meta.profile"
 
   - code: "Missing Values identifierType"
     expression: "Missing Values identifierType"
+
+  - code: "Missing Values identifier.system"
+    expression: "Missing Values identifier.system"
 
   - code: "Missing Values identifierValue"
     expression: "Missing Values identifierValue"
@@ -44,6 +50,12 @@ group:
 
   - code: "Missing Values Anforderungsdatum"
     expression: "Missing Values Anforderungsdatum"
+
+  - code: "Missing Values specimen.reference"
+    expression: "Missing Values specimen.reference"
+
+  - code: "Missing Values specimen.identifier"
+    expression: "Missing Values specimen.identifier"
 
 # Consistency 
 ## DQI: Inadmissble categorical values
