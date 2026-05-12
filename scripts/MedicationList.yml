@@ -12,8 +12,14 @@ group:
   - code: "Missing values List.id"
     expression: "Missing values List.id"
 
-  - code: "Missing values List.meta"
-    expression: "Missing values List.meta"
+  - code: "Missing values List.meta.source"
+    expression: "Missing values List.meta.source"
+
+  - code: "Missing values List.meta.profile"
+    expression: "Missing values List.meta.profile"
+
+  - code: "Missing values List.identifier"
+    expression: "Missing values List.identifier"
 
   - code: "Missing values List.status"
     expression: "Missing values List.status"
@@ -21,9 +27,6 @@ group:
   - code: "Missing values List.mode"
     expression: "Missing values List.mode"
   
-  - code: "Missing values List.title"
-    expression: "Missing values List.title"
-
   - code: "Missing values Medikationslistencode"
     expression: "Missing values Medikationslistencode"
 
@@ -36,8 +39,11 @@ group:
   - code: "Missing values encounter"
     expression: "Missing values encounter"
 
-  - code: "Missing values entry"
-    expression: "Missing values entry"
+  - code: "Missing values date"
+    expression: "Missing values date"
+
+  - code: "Missing values entry.item"
+    expression: "Missing values entry.item"
 
 #Consistency 
 ## DQI: Inadmissble categorical values

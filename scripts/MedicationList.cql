@@ -38,17 +38,20 @@ DQI: Missing values
 define function "Missing values List.id"(lst "List"):
   lst.id is not null
 
-define function "Missing values List.meta"(lst "List"):
-  lst.meta is not null
+define function "Missing values List.meta.source"(lst "List"):
+  lst.meta.source is not null
+
+define function "Missing values List.meta.profile"(lst "List"):
+  lst.meta.profile is not null
+
+define function "Missing values List.identifier"(lst "List"):
+  lst.identifier is not null
 
 define function "Missing values List.status"(lst "List"):
   lst.status is not null
 
 define function "Missing values List.mode"(lst "List"):
   lst.mode is not null
-
-define function "Missing values List.title"(lst "List"):
-  lst.title is not null
 
 define function "Missing values Medikationslistencode"(lst "List"):
   lst.code.coding.where(system='http://terminology.hl7.org/CodeSystem/list-example-use-codes') is not null
@@ -62,8 +65,11 @@ define function "Missing values subject"(lst "List"):
 define function "Missing values encounter"(lst "List"):
   lst.encounter is not null
 
-define function "Missing values entry"(lst "List"):
-  lst.entry is not null
+define function "Missing values date"(lst "List"):
+  lst.date is not null
+
+define function "Missing values entry.item"(lst "List"):
+  lst.entry.item is not null
 
 
 /* 
