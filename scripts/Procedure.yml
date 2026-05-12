@@ -12,12 +12,17 @@ group:
   - code: "Missing values Procedure.id"
     expression: "Missing values Procedure.id"
 
-  - code: "Missing values Procedure.meta"
-    expression: "Missing values Procedure.meta"
+  - code: "Missing values Procedure.meta.source"
+    expression: "Missing values Procedure.meta.source"
 
-  - code: "Missing values Dokumentationsdatum"
-    expression: "Missing values Dokumentationsdatum"
+  - code: "Missing values Procedure.meta.profile"
+    expression: "Missing values Procedure.meta.profile"
 
+  - code: "Missing values ProzedurDokumentationsdatum"
+    expression: "Missing values ProzedurDokumentationsdatum"
+
+  - code: "Missing values Durchfuehrungsabsicht"
+    expression: "Missing values Durchfuehrungsabsicht"
 
   - code: "Missing values status"
     expression: "Missing values status"
@@ -37,11 +42,20 @@ group:
   - code: "Missing values subject"
     expression: "Missing values subject"
 
-  - code: "Missing values encounter"
-    expression: "Missing values encounter"
-
   - code: "Missing values Durchfuehrungsdatum"
     expression: "Missing values Durchfuehrungsdatum"
+
+  - code: "Missing values bodySite.system"
+    expression: "Missing values bodySite.system"
+
+  - code: "Missing values bodySite.version"
+    expression: "Missing values bodySite.version"
+
+  - code: "Missing values bodySite.code"
+    expression: "Missing values bodySite.code"
+
+  - code: "Missing values note"
+    expression: "Missing values note"
 
 #Consistency 
 ## DQI: Inadmissble categorical values

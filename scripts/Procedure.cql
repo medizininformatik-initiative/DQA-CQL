@@ -43,12 +43,17 @@ DQI: Missing values
 define function "Missing values Procedure.id" (procedure Procedure): 
   procedure.id is not null
 
-define function "Missing values Procedure.meta" (procedure Procedure): 
-  procedure.meta is not null
+define function "Missing values Procedure.meta.source"(procedure Procedure): 
+  procedure.meta.source is not null
 
-  
-define function "Missing values Dokumentationsdatum"(procedure Procedure):
-  procedure.extension.where(url='http://fhir.de/StructureDefinition/ProzedurDokumentationsdatum').first()
+define function "Missing values Procedure.meta.profile"(procedure Procedure): 
+  procedure.meta.profile is not null 
+
+define function "Missing values ProzedurDokumentationsdatum"(procedure Procedure):
+  procedure.extension.where(url='http://fhir.de/StructureDefinition/ProzedurDokumentationsdatum').value is not null
+
+define function "Missing values Durchfuehrungsabsicht"(procedure Procedure):
+  procedure.extension.where(url='https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/StructureDefinition/Durchfuehrungsabsicht').value is not null
 
 
 define function "Missing values status" (procedure Procedure): 
@@ -61,21 +66,31 @@ define function "Missing values SNOMED.display" (procedure Procedure):
   exists(procedure.category.coding.where(system='http://snomed.info/sct').display)
 
 
-define function "Missing values OPS.code" (procedure Procedure):
+define function "Missing values OPS.code"(procedure Procedure):
   exists(procedure.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/ops').code)
 
 define function "Missing values OPS.display" (procedure Procedure):
   exists(procedure.code.coding.where(system='http://fhir.de/CodeSystem/bfarm/ops').display)
 
 
-define function "Missing values subject" (procedure Procedure):
+define function "Missing values subject"(procedure Procedure):
   exists(procedure.subject.reference)
 
-define function "Missing values encounter" (procedure Procedure):
-  exists(procedure.encounter.reference)
-
-define function "Missing values Durchfuehrungsdatum" (procedure Procedure):
+define function "Missing values Durchfuehrungsdatum"(procedure Procedure):
   exists(procedure.performed as dateTime) 
+
+define function "Missing values bodySite.system"(procedure Procedure):
+  exists(procedure.bodySite.coding.system)
+
+define function "Missing values bodySite.version"(procedure Procedure):
+  exists(procedure.bodySite.coding.version)
+
+define function "Missing values bodySite.code"(procedure Procedure):
+  exists(procedure.bodySite.coding.code)
+
+define function "Missing values note"(procedure Procedure):
+  exists(procedure.note)
+
 
 /* Consistency
 DQI: Inadmissble categorical values
