@@ -25,46 +25,43 @@ Completeness
 DQI: Missing values
 */
   
-define "Missing values: Patient.id":
+define "Missing values Patient.id":
   exists(Patient.id)
 
-define "Missing values: Patient.meta":
-  exists(Patient.meta)
-
-define "Missing values: Patient.meta.profile":
+define "Missing values Patient.meta.profile":
   exists(Patient.meta.profile)
 
-define "Missing values: Patient.identifier:PseudonymisierterIdentifier":
-  exists (
-    Patient.identifier i
-      where i.system = 'https://www.medizininformatik-initiative.de/fhir/sid/pseudonym'
-        and i.value is not null
-  )
+define "Missing values Patient.identifier":
+  exists (Patient.identifier)
 
-define "Missing values: Patient.gender":
+define "Missing values Patient.active":
+  exists (Patient.active)
+
+define "Missing values Patient.gender":
   exists(Patient.gender)
 
-define "Missing values: Patient.birthDate":
+define "Missing values Patient.birthDate":
   exists(Patient.birthDate)
 
-define "Missing values: Patient.address.country":
+define "Missing values Patient.address.type":
+  exists(Patient.address.type)
+
+define "Missing values Patient.address.postalCode":
+  exists(Patient.address.postalCode)
+
+define "Missing values Patient.address.country":
   exists(Patient.address.country)
 
-define "Missing values: Patient.address.postalCode":
-  exists(Patient.address.postalCode)
+
 
 /* Consistency
 DQI: Inadmissible categorical values
 */
 
-define "Inadmissible categorical values: Patient.gender":
-  not (Patient.gender in "Gender")
+define "Inadmissible categorical values Patient.gender":
+  not(Patient.gender in "Gender")
 
-define "Inadmissible categorical values: Patient.address.country":
-  NonMatchingString(Patient.address.country.first(), Country)
+define "Inadmissible categorical values Patient.address.country":
+  NonMatchingString(Patient.address.country, Country)
 
-//define "Inadmissible categorical values: Patient.identifier":
-//  not (Patient.identifier in "identifier")
 
-//define "Inadmissible categorical values: Patient.ObservationValue":
-//  not (Patient.ObservationValue in "ObservationValue")
