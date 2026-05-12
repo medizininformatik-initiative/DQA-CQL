@@ -3,7 +3,6 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1'
 
 valueset Status:'http://hl7.org/fhir/ValueSet/medication-admin-status'
-//valueset intent:'http://hl7.org/fhir/ValueSet/medicationrequest-intent'
 valueset route:'http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration'
 
 context Patient
@@ -35,16 +34,30 @@ DQI: Missing values
 define function "Missing values MedicationAdministration.id"(MedicationAdministration MedicationAdministration): 
   MedicationAdministration.id is not null
 
-define function "Missing values MedicationAdministration.meta"(MedicationAdministration MedicationAdministration): 
-  MedicationAdministration.meta is not null
+define function "Missing values MedicationAdministration.meta.source"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.meta.source is not null
+
+define function "Missing values MedicationAdministration.meta.profile"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.meta.profile is not null
+
+define function "Missing values MedicationAdministration.identifier"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.identifier is not null
+
+define function "Missing values partOf"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.identifier is not null
 
 define function "Missing values MedicationAdministration.status"(MedicationAdministration MedicationAdministration): 
   MedicationAdministration.status is not null
 
-define function "Missing values MedicationAdministration.medicationReference"(MedicationAdministration MedicationAdministration): 
-    if MedicationAdministration.medication is Reference then
+define function "Missing values MedicationAdministration.category"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.category is not null
+
+define function "Missing values MedicationAdministration.medication"(MedicationAdministration MedicationAdministration): 
+  if MedicationAdministration.medication is Reference then
     (MedicationAdministration.medication as Reference).reference is not null
-    else
+  else if MedicationAdministration.medication is CodeableConcept then
+    (MedicationAdministration.medication as CodeableConcept).coding is not null
+  else    
     false
 
 define function "Missing values Subject"(MedicationAdministration MedicationAdministration): 
@@ -53,11 +66,7 @@ define function "Missing values Subject"(MedicationAdministration MedicationAdmi
 define function "Missing values Context"(MedicationAdministration MedicationAdministration): 
   MedicationAdministration.context is not null
 
-define function "Missing values request"(MedicationAdministration MedicationAdministration): 
-  MedicationAdministration.request is not null
-
 // Verabreichungszeitpunkt
-
 define function "Effective type"(MedicationAdministration MedicationAdministration):
   case
     when MedicationAdministration.effective is null then 'null'
@@ -69,10 +78,44 @@ define function "Effective type"(MedicationAdministration MedicationAdministrati
 define function "Missing values Effective"(MedicationAdministration MedicationAdministration): 
   MedicationAdministration.effective is not null
 
+define function "Missing values performer"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.performer is not null
+
+define function "Missing values reasonCode"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.reasonCode is not null
+
+define function "Missing values reasonReference"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.reasonReference is not null
+
+define function "Missing values request"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.request is not null
+
+define function "Missing values note"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.note is not null
+
+define function "Missing values dosage.text"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.dosage.text is not null
+
+define function "Missing values dosage.site"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.dosage.site is not null
 
 define function "Missing values dosage.route"(MedicationAdministration MedicationAdministration): 
   MedicationAdministration.dosage.route is not null
 
+define function "Missing values dosage.dose.value"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.dosage.dose.value is not null
+
+define function "Missing values dosage.dose.unit"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.dosage.dose.unit is not null
+
+define function "Missing values dosage.dose.system"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.dosage.dose.system is not null
+
+define function "Missing values dosage.dose.code"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.dosage.dose.code is not null
+
+define function "Missing values dosage.rate"(MedicationAdministration MedicationAdministration): 
+  MedicationAdministration.dosage.rate is not null
 
 /* 
 Consistency 
@@ -95,7 +138,3 @@ define function "Weg der Anwendung observed"(MedicationAdministration Medication
 define function "Inadmissible categorical values dosage.route"(MedicationAdministration MedicationAdministration):
   NonMatching(MedicationAdministration.dosage.route ,route)
 
-/* 
-Contradictions
-DQI: Logical Contradictions
-*/
