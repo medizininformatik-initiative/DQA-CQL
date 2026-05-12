@@ -9,8 +9,14 @@ group:
   - code: "Missing values Observation.id"
     expression: "Missing values Observation.id"
 
-  - code: "Missing values meta"
-    expression: "Missing values meta"
+  - code: "Missing values meta.source"
+    expression: "Missing values meta.source"
+
+  - code: "Missing values meta.profile"
+    expression: "Missing values meta.profile"
+
+  - code: "Missing values modifierExtension"
+    expression: "Missing values modifierExtension"
 
   - code: "Missing values identifierType"
     expression: "Missing values identifierType"
@@ -48,14 +54,47 @@ group:
   - code: "Missing values Untersuchungszeitpunkt"
     expression: "Missing values Untersuchungszeitpunkt"
 
+  - code: "Missing values Dokumentationsdatum"
+    expression: "Missing values Dokumentationsdatum"
+
   - code: "Missing values Messwert"
     expression: "Missing values Messwert"
+
+  - code: "Missing values dataAbsentReason"
+    expression: "Missing values dataAbsentReason"
 
   - code: "Missing values Interpretation"
     expression: "Missing values Interpretation"
 
-  - code: "Missing values Referenzbereich"
-    expression: "Missing values Referenzbereich"
+  - code: "Missing values note"
+    expression: "Missing values note"
+
+  - code: "Missing values method.coding.system"
+    expression: "Missing values method.coding.system"
+
+  - code: "Missing values method.coding.code"
+    expression: "Missing values method.coding.code"
+
+  - code: "Missing values method.coding.display"
+    expression: "Missing values method.coding.display"       
+
+  - code: "Missing values specimen.reference"
+    expression: "Missing values specimen.reference" 
+
+  - code: "Missing values specimen.identifier"
+    expression: "Missing values specimen.identifier" 
+
+  - code: "Missing values device.reference"
+    expression: "Missing values device.reference"
+
+  - code: "Missing values device.identifier"
+    expression: "Missing values device.identifier"
+
+  - code: "Missing values referenceRange.low"
+    expression: "Missing values referenceRange.low"
+
+  - code: "Missing values referenceRange.high"
+    expression: "Missing values referenceRange.high"
 
 #Consistency 
 ## DQI: Inadmissble categorical values
