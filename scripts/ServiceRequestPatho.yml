@@ -12,26 +12,41 @@ group:
   - code: "Missing Values ServiceRequest id"
     expression: "Missing Values ServiceRequest id"
 
-  - code: "Missing Values ServiceRequest meta"
-    expression: "Missing Values ServiceRequest meta"
+  - code: "Missing Values ServiceRequest meta.source"
+    expression: "Missing Values ServiceRequest meta.source"
+
+  - code: "Missing Values ServiceRequest meta.profile"
+    expression: "Missing Values ServiceRequest meta.profile"
 
   - code: "Missing Values identifierType"
     expression: "Missing Values identifierType"
 
+  - code: "Missing Values identifier.system"
+    expression: "Missing Values identifier.system"
+
   - code: "Missing Values identifierValue"
     expression: "Missing Values identifierValue"
 
-  - code: "Missing Values Identifikator für Auftragsgruppen"
-    expression: "Missing Values Identifikator für Auftragsgruppen"
+  - code: "Missing Values identifier.assigner"
+    expression: "Missing Values identifier.assigner"
 
   - code: "Missing Values status"
     expression: "Missing Values status"
 
+  - code: "Missing Values intent"
+    expression: "Missing Values intent"
+
   - code: "Missing Values Kategorie des Untersuchungsauftrags"
     expression: "Missing Values Kategorie des Untersuchungsauftrags"
 
-  - code: "Missing Values Code für die angeforderte Leistung"
-    expression: "Missing Values Code für die angeforderte Leistung"
+  - code: "Missing Values code.coding.system"
+    expression: "Missing Values code.coding.system"
+
+  - code: "Missing Values code.coding.code"
+    expression: "Missing Values code.coding.code"
+
+  - code: "Missing Values code.coding.display"
+    expression: "Missing Values code.coding.display"
 
   - code: "Missing Values subject"
     expression: "Missing Values subject"
@@ -41,9 +56,6 @@ group:
 
   - code: "Missing Values authoredOn"
     expression: "Missing Values authoredOn"
-
-  - code: "Missing Values requester"
-    expression: "Missing Values requester"
 
   - code: "Missing Values specimen"
     expression: "Missing Values specimen"
@@ -55,8 +67,8 @@ group:
   - code: "identifierType observed"
     expression: "identifierType observed"
 
-#  - code: "Inadmissible categorical values identifierType"
-#    expression: "Inadmissible categorical values identifierType"
+  - code: "Inadmissible categorical values identifierType"
+    expression: "Inadmissible categorical values identifierType"
 
 ### Status
   - code: "Status observed"
